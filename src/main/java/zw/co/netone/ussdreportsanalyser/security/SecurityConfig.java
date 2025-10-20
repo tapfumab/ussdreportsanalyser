@@ -35,6 +35,8 @@ public class SecurityConfig {
                   .authorizeHttpRequests(request -> request.requestMatchers("/login/**").permitAll()
                           .requestMatchers("/register/**", "/user/delete/**", "/user/update/**", "/user/all", "/user/by-id/{id}")
                           .hasAnyRole("ADMIN", "SUPERVISOR")
+                          .requestMatchers("/swagger-ui/**", "/v2/api-docs", "/swagger-resources/**", "/webjars/**")
+                          .permitAll()
                           .anyRequest()
                           .authenticated()
                 ).userDetailsService(myUserDetailsService)
