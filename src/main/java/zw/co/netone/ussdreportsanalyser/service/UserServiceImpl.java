@@ -13,9 +13,7 @@ import zw.co.netone.ussdreportsanalyser.repository.RoleRepository;
 import zw.co.netone.ussdreportsanalyser.repository.UserRepository;
 import zw.co.netone.ussdreportsanalyser.security.JwtService;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -70,8 +68,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public AuthenticationResponse<?> registerUser(RegisterUserRequest registrationRequest) {
         AuthenticationResponse<?> validation = validateUser(registrationRequest);
-        if (!validation.success()) {
-            log.warn("User registration validation failed: {}", validation.message());
+        if (!validation.isSuccess()) {
+            log.warn("User registration validation failed: {}", validation.getMessage());
             return validation;
         }
 
@@ -81,7 +79,6 @@ public class UserServiceImpl implements UserService {
                     .lastName(registrationRequest.lastName())
                     .email(registrationRequest.email())
                     .username(registrationRequest.username())
-                    .password(passwordEncoder.encode(registrationRequest.password()))
                     .cellNumber(registrationRequest.cellNumber())
                     .role(roleRepository.findByName(USER_ROLE))
                     .activeStatus(true)
@@ -173,7 +170,7 @@ public class UserServiceImpl implements UserService {
         }    }
 
     @Override
-    public ApiResponse<User> findUserById(Long id) {
+    public ApiResponse<UserResponse> findUserById(Long id) {
         try {
             User user = userRepository.findById(id)
                     .orElseThrow(() -> new IllegalArgumentException(USER_NOT_FOUND));

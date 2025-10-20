@@ -2,7 +2,6 @@ package zw.co.netone.ussdreportsanalyser.service;
 
 
 import zw.co.netone.ussdreportsanalyser.dto.*;
-import zw.co.netone.ussdreportsanalyser.model.User;
 
 import java.util.List;
 
@@ -17,5 +16,5 @@ public interface UserService {
 
     ApiResponse<List<UserResponse>> findAllUsers();
 
-    ApiResponse<User> findUserById(Long id);
+    ApiResponse<UserResponse> findUserById(Long id);
 }
