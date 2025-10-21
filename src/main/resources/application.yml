@@ -1,0 +1,46 @@
+server:
+  port: 8914
+
+local:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ussd_reports_analyser?autoReconnect=true&createDatabaseIfNotExist=true&useSSL=false
+    username: root
+    password: D3v3l@p3r
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+## Secondary datasource configuration
+#xyz:
+#  datasource:
+#    url: jdbc:sqlserver://10.95.236.18:1433;databaseName=NetOne Training;encrypt=true;trustServerCertificate=true
+#    username:
+#    password:
+#    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+secret:
+  key: 4be86562bd6bd134a0bae78c41f3c3f50edc613831a4076e938058af7353e2f2
+
+#logging:
+#  file:
+#    name: /data/logs/sageClientApi.log
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method
+    tagsSorter: alpha
+    display-request-duration: true
+
+active.directory:
+  domain: 'netone.co.zw'
+  url: 'ldap://10.95.10.63:389'
+  root_dn: 'dc=netone,dc=co,dc=zw'

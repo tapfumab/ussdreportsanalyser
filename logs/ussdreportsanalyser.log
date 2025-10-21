@@ -1,0 +1,1371 @@
+2025-10-20 11:58:06 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Starting UssdreportsanalyserApplication using Java 17.0.14 with PID 16905 (/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes started by benedicttapfuma in /Users/benedicttapfuma/IdeaProjects/usdreportsanalyser)
+2025-10-20 11:58:06 [restartedMain] DEBUG z.c.n.u.UssdreportsanalyserApplication - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-20 11:58:06 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-20 11:58:06 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-20 11:58:06 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-20 11:58:07 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-20 11:58:07 [restartedMain] DEBUG o.s.d.r.c.RepositoryConfigurationDelegate - Scanning for JPA repositories in packages zw.co.netone.ussdreportsanalyser.
+2025-10-20 11:58:07 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/RoleRepository.class]
+2025-10-20 11:58:07 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/UserRepository.class]
+2025-10-20 11:58:07 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+2025-10-20 11:58:07 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8914 (http)
+2025-10-20 11:58:07 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-20 11:58:07 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-20 11:58:07 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-20 11:58:07 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1702 ms
+2025-10-20 11:58:08 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-20 11:58:08 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-20 11:58:08 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-20 11:58:08 [restartedMain] INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2025-10-20 11:58:08 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-20 11:58:08 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-20 11:58:08 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@23820c98
+2025-10-20 11:58:08 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-20 11:58:08 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-20 11:58:08 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-10-20 11:58:08 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-20 11:58:08 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.Shop
+2025-10-20 11:58:08 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.User
+2025-10-20 11:58:09 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-20 11:58:09 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 11:58:09 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Initializing JpaMetamodelMappingContext…
+2025-10-20 11:58:09 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Finished initializing JpaMetamodelMappingContext
+2025-10-20 11:58:09 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository…
+2025-10-20 11:58:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrueAndRole_Id'
+2025-10-20 11:58:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrueAndRole_Id
+2025-10-20 11:58:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByUsername'
+2025-10-20 11:58:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByUsername
+2025-10-20 11:58:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrue'
+2025-10-20 11:58:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrue
+2025-10-20 11:58:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByEmail'
+2025-10-20 11:58:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByEmail
+2025-10-20 11:58:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByCellNumber'
+2025-10-20 11:58:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByCellNumber
+2025-10-20 11:58:10 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository.
+2025-10-20 11:58:10 [restartedMain] DEBUG z.c.n.u.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-10-20 11:58:10 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name activeDirectoryLdapAuthenticationProvider
+2025-10-20 11:58:10 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-20 11:58:10 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository…
+2025-10-20 11:58:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'Role.findByName'
+2025-10-20 11:58:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Role.findByName
+2025-10-20 11:58:10 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository.
+2025-10-20 11:58:10 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-10-20 11:58:10 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-10-20 11:58:10 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-20 11:58:10 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-20 11:58:10 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-20 11:58:10 [restartedMain] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-10-20 11:58:10 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-10-20 11:58:10 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8914 (http) with context path '/'
+2025-10-20 11:58:10 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Started UssdreportsanalyserApplication in 5.516 seconds (process running for 6.353)
+2025-10-20 12:00:29 [http-nio-8914-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-20 12:00:29 [http-nio-8914-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-20 12:00:29 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2025-10-20 12:00:29 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2025-10-20 12:00:29 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2025-10-20 12:00:29 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4ce86e71
+2025-10-20 12:00:29 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@60c0ed9f
+2025-10-20 12:00:29 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-10-20 12:00:29 [http-nio-8914-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2025-10-20 12:00:29 [http-nio-8914-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui.html
+2025-10-20 12:00:29 [http-nio-8914-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:00:29 [http-nio-8914-exec-1] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:00:29 [http-nio-8914-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-10-20 12:00:29 [http-nio-8914-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:00:29 [http-nio-8914-exec-1] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:00:47 [http-nio-8914-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui.html
+2025-10-20 12:00:47 [http-nio-8914-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:00:47 [http-nio-8914-exec-2] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:00:47 [http-nio-8914-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-10-20 12:00:47 [http-nio-8914-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:00:47 [http-nio-8914-exec-2] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:01:04 [http-nio-8914-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui.html
+2025-10-20 12:01:04 [http-nio-8914-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:01:04 [http-nio-8914-exec-3] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:01:04 [http-nio-8914-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-10-20 12:01:04 [http-nio-8914-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:01:04 [http-nio-8914-exec-3] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:30:34 [http-nio-8914-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui.html
+2025-10-20 12:30:34 [http-nio-8914-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:30:34 [http-nio-8914-exec-5] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:30:34 [http-nio-8914-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-10-20 12:30:34 [http-nio-8914-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:30:34 [http-nio-8914-exec-5] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:30:49 [http-nio-8914-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui.html
+2025-10-20 12:30:49 [http-nio-8914-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:30:49 [http-nio-8914-exec-6] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:30:49 [http-nio-8914-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-10-20 12:30:49 [http-nio-8914-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:30:49 [http-nio-8914-exec-6] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:31:11 [http-nio-8914-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui.html/
+2025-10-20 12:31:11 [http-nio-8914-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:31:11 [http-nio-8914-exec-7] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:31:11 [http-nio-8914-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-10-20 12:31:11 [http-nio-8914-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:31:11 [http-nio-8914-exec-7] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:31:43 [http-nio-8914-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui.html
+2025-10-20 12:31:43 [http-nio-8914-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:31:43 [http-nio-8914-exec-9] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:31:43 [http-nio-8914-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-10-20 12:31:43 [http-nio-8914-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:31:43 [http-nio-8914-exec-9] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:32:49 [http-nio-8914-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui.html
+2025-10-20 12:32:49 [http-nio-8914-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:32:49 [http-nio-8914-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui.html
+2025-10-20 12:32:49 [http-nio-8914-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui.html", parameters={}
+2025-10-20 12:32:49 [http-nio-8914-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-20 12:32:49 [http-nio-8914-exec-2] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2025-10-20 12:32:49 [http-nio-8914-exec-2] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource swagger-ui/swagger-ui.html.]
+2025-10-20 12:32:49 [http-nio-8914-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2025-10-20 12:32:49 [http-nio-8914-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-10-20 12:32:49 [http-nio-8914-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:32:49 [http-nio-8914-exec-2] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:32:55 [http-nio-8914-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/
+2025-10-20 12:32:55 [http-nio-8914-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:32:55 [http-nio-8914-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/
+2025-10-20 12:32:55 [http-nio-8914-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/", parameters={}
+2025-10-20 12:32:55 [http-nio-8914-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-20 12:32:55 [http-nio-8914-exec-3] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2025-10-20 12:32:55 [http-nio-8914-exec-3] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource swagger-ui.]
+2025-10-20 12:32:55 [http-nio-8914-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2025-10-20 12:32:55 [http-nio-8914-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-10-20 12:32:55 [http-nio-8914-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:32:55 [http-nio-8914-exec-3] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:35:37 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 29 class path changes (0 additions, 27 deletions, 2 modifications)
+2025-10-20 12:35:37 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-20 12:35:37 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-10-20 12:35:37 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 12:35:37 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-20 12:35:37 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-20 12:35:37 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Starting UssdreportsanalyserApplication using Java 17.0.14 with PID 16905 (/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes started by benedicttapfuma in /Users/benedicttapfuma/IdeaProjects/usdreportsanalyser)
+2025-10-20 12:35:37 [restartedMain] DEBUG z.c.n.u.UssdreportsanalyserApplication - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-20 12:35:37 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-20 12:35:37 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-20 12:35:37 [restartedMain] DEBUG o.s.d.r.c.RepositoryConfigurationDelegate - Scanning for JPA repositories in packages zw.co.netone.ussdreportsanalyser.
+2025-10-20 12:35:37 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2025-10-20 12:35:38 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8914 (http)
+2025-10-20 12:35:38 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-20 12:35:38 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-20 12:35:38 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-20 12:35:38 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 946 ms
+2025-10-20 12:35:38 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-20 12:35:38 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-20 12:35:38 [restartedMain] INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2025-10-20 12:35:38 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-20 12:35:38 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-10-20 12:35:38 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@32f37d75
+2025-10-20 12:35:38 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-10-20 12:35:38 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-20 12:35:38 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-10-20 12:35:38 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-20 12:35:38 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-20 12:35:38 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 12:35:38 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 6 mappings in 'requestMappingHandlerMapping'
+2025-10-20 12:35:38 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-10-20 12:35:38 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-20 12:35:38 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-20 12:35:39 [restartedMain] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-10-20 12:35:39 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-20 12:35:39 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-20 12:35:39 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-10-20 12:35:39 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8914 (http) with context path '/'
+2025-10-20 12:35:39 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Started UssdreportsanalyserApplication in 1.826 seconds (process running for 2254.603)
+2025-10-20 12:35:39 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration matched:
+      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   UserDetailsServiceAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - AnyNestedCondition 3 matched 0 did not; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) matched; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) matched; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured)
+      - @ConditionalOnBean (types: org.springframework.security.config.ObjectPostProcessor; SearchStrategy: all) found beans 'objectPostProcessor', 'webAuthorizationManagerPostProcessor', 'filterChainDecoratorPostProcessor', 'authenticationManagerPostProcessor'; @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,?; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2025-10-20 12:36:26 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-20 12:36:26 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-10-20 12:36:26 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 12:36:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-10-20 12:36:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-10-20 12:36:33 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Starting UssdreportsanalyserApplication using Java 17.0.14 with PID 18512 (/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes started by benedicttapfuma in /Users/benedicttapfuma/IdeaProjects/usdreportsanalyser)
+2025-10-20 12:36:33 [restartedMain] DEBUG z.c.n.u.UssdreportsanalyserApplication - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-20 12:36:33 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-20 12:36:33 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-20 12:36:33 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-20 12:36:33 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-20 12:36:33 [restartedMain] DEBUG o.s.d.r.c.RepositoryConfigurationDelegate - Scanning for JPA repositories in packages zw.co.netone.ussdreportsanalyser.
+2025-10-20 12:36:33 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/RoleRepository.class]
+2025-10-20 12:36:33 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/UserRepository.class]
+2025-10-20 12:36:34 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 38 ms. Found 2 JPA repository interfaces.
+2025-10-20 12:36:34 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8914 (http)
+2025-10-20 12:36:34 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-20 12:36:34 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-20 12:36:34 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-20 12:36:34 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1361 ms
+2025-10-20 12:36:34 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-20 12:36:34 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-20 12:36:34 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-20 12:36:34 [restartedMain] INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2025-10-20 12:36:34 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-20 12:36:35 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-20 12:36:35 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@46ab3888
+2025-10-20 12:36:35 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-20 12:36:35 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-20 12:36:35 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-10-20 12:36:35 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-20 12:36:35 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.Shop
+2025-10-20 12:36:35 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.User
+2025-10-20 12:36:36 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-20 12:36:36 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Initializing JpaMetamodelMappingContext…
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Finished initializing JpaMetamodelMappingContext
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository…
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrueAndRole_Id'
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrueAndRole_Id
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByUsername'
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByUsername
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrue'
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrue
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByEmail'
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByEmail
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByCellNumber'
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByCellNumber
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository.
+2025-10-20 12:36:36 [restartedMain] DEBUG z.c.n.u.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-10-20 12:36:36 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name activeDirectoryLdapAuthenticationProvider
+2025-10-20 12:36:36 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository…
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'Role.findByName'
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Role.findByName
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository.
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-20 12:36:36 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-20 12:36:37 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-20 12:36:37 [restartedMain] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-10-20 12:36:37 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-10-20 12:36:37 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8914 (http) with context path '/'
+2025-10-20 12:36:37 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Started UssdreportsanalyserApplication in 4.598 seconds (process running for 5.231)
+2025-10-20 12:37:01 [http-nio-8914-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-20 12:37:01 [http-nio-8914-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-20 12:37:01 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2025-10-20 12:37:01 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2025-10-20 12:37:01 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2025-10-20 12:37:01 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1bd943fe
+2025-10-20 12:37:01 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@472e801c
+2025-10-20 12:37:01 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-10-20 12:37:01 [http-nio-8914-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-10-20 12:37:01 [http-nio-8914-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/
+2025-10-20 12:37:01 [http-nio-8914-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:37:01 [http-nio-8914-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/
+2025-10-20 12:37:01 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/", parameters={}
+2025-10-20 12:37:01 [http-nio-8914-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-20 12:37:01 [http-nio-8914-exec-1] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2025-10-20 12:37:01 [http-nio-8914-exec-1] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource swagger-ui.]
+2025-10-20 12:37:01 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2025-10-20 12:37:01 [http-nio-8914-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-10-20 12:37:01 [http-nio-8914-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:37:01 [http-nio-8914-exec-1] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:37:16 [http-nio-8914-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/
+2025-10-20 12:37:16 [http-nio-8914-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:37:16 [http-nio-8914-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/
+2025-10-20 12:37:16 [http-nio-8914-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/", parameters={}
+2025-10-20 12:37:16 [http-nio-8914-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-20 12:37:16 [http-nio-8914-exec-2] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2025-10-20 12:37:16 [http-nio-8914-exec-2] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource swagger-ui.]
+2025-10-20 12:37:16 [http-nio-8914-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2025-10-20 12:37:16 [http-nio-8914-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-10-20 12:37:16 [http-nio-8914-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:37:16 [http-nio-8914-exec-2] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:37:27 [http-nio-8914-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui.html
+2025-10-20 12:37:27 [http-nio-8914-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:37:27 [http-nio-8914-exec-3] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:37:27 [http-nio-8914-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-10-20 12:37:27 [http-nio-8914-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:37:27 [http-nio-8914-exec-3] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:37:39 [http-nio-8914-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/
+2025-10-20 12:37:39 [http-nio-8914-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:37:39 [http-nio-8914-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/
+2025-10-20 12:37:39 [http-nio-8914-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/", parameters={}
+2025-10-20 12:37:39 [http-nio-8914-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-20 12:37:39 [http-nio-8914-exec-5] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2025-10-20 12:37:39 [http-nio-8914-exec-5] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource swagger-ui.]
+2025-10-20 12:37:39 [http-nio-8914-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2025-10-20 12:37:39 [http-nio-8914-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-10-20 12:37:39 [http-nio-8914-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:37:39 [http-nio-8914-exec-5] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:37:42 [http-nio-8914-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/
+2025-10-20 12:37:42 [http-nio-8914-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:37:42 [http-nio-8914-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/
+2025-10-20 12:37:42 [http-nio-8914-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/", parameters={}
+2025-10-20 12:37:42 [http-nio-8914-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-20 12:37:42 [http-nio-8914-exec-6] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2025-10-20 12:37:42 [http-nio-8914-exec-6] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource swagger-ui.]
+2025-10-20 12:37:42 [http-nio-8914-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2025-10-20 12:37:42 [http-nio-8914-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-10-20 12:37:42 [http-nio-8914-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:37:42 [http-nio-8914-exec-6] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:37:43 [http-nio-8914-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/
+2025-10-20 12:37:43 [http-nio-8914-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:37:43 [http-nio-8914-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/
+2025-10-20 12:37:43 [http-nio-8914-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/", parameters={}
+2025-10-20 12:37:43 [http-nio-8914-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-20 12:37:43 [http-nio-8914-exec-7] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2025-10-20 12:37:43 [http-nio-8914-exec-7] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource swagger-ui.]
+2025-10-20 12:37:43 [http-nio-8914-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2025-10-20 12:37:43 [http-nio-8914-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-10-20 12:37:43 [http-nio-8914-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:37:43 [http-nio-8914-exec-7] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:39:06 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-20 12:39:06 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-10-20 12:39:06 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 12:39:06 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-20 12:39:06 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-20 12:39:13 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Starting UssdreportsanalyserApplication using Java 17.0.14 with PID 18633 (/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes started by benedicttapfuma in /Users/benedicttapfuma/IdeaProjects/usdreportsanalyser)
+2025-10-20 12:39:13 [restartedMain] DEBUG z.c.n.u.UssdreportsanalyserApplication - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-20 12:39:13 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-20 12:39:13 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-20 12:39:13 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-20 12:39:14 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-20 12:39:14 [restartedMain] DEBUG o.s.d.r.c.RepositoryConfigurationDelegate - Scanning for JPA repositories in packages zw.co.netone.ussdreportsanalyser.
+2025-10-20 12:39:14 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/RoleRepository.class]
+2025-10-20 12:39:14 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/UserRepository.class]
+2025-10-20 12:39:14 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 2 JPA repository interfaces.
+2025-10-20 12:39:14 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8914 (http)
+2025-10-20 12:39:14 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-20 12:39:14 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-20 12:39:14 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-20 12:39:14 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1567 ms
+2025-10-20 12:39:15 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-20 12:39:15 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-20 12:39:15 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-20 12:39:15 [restartedMain] INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2025-10-20 12:39:15 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-20 12:39:15 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-20 12:39:15 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c421b1a
+2025-10-20 12:39:15 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-20 12:39:15 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-20 12:39:15 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-10-20 12:39:15 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-20 12:39:15 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.Shop
+2025-10-20 12:39:15 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.User
+2025-10-20 12:39:16 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-20 12:39:16 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 12:39:16 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Initializing JpaMetamodelMappingContext…
+2025-10-20 12:39:16 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Finished initializing JpaMetamodelMappingContext
+2025-10-20 12:39:16 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository…
+2025-10-20 12:39:16 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrue'
+2025-10-20 12:39:17 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrue
+2025-10-20 12:39:17 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByEmail'
+2025-10-20 12:39:17 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByEmail
+2025-10-20 12:39:17 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByCellNumber'
+2025-10-20 12:39:17 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByCellNumber
+2025-10-20 12:39:17 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByUsername'
+2025-10-20 12:39:17 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByUsername
+2025-10-20 12:39:17 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrueAndRole_Id'
+2025-10-20 12:39:17 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrueAndRole_Id
+2025-10-20 12:39:17 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository.
+2025-10-20 12:39:17 [restartedMain] DEBUG z.c.n.u.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-10-20 12:39:17 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name activeDirectoryLdapAuthenticationProvider
+2025-10-20 12:39:17 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-20 12:39:17 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository…
+2025-10-20 12:39:17 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'Role.findByName'
+2025-10-20 12:39:17 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Role.findByName
+2025-10-20 12:39:17 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository.
+2025-10-20 12:39:17 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-10-20 12:39:17 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-10-20 12:39:17 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-20 12:39:17 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-20 12:39:17 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-20 12:39:17 [restartedMain] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-10-20 12:39:17 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-10-20 12:39:18 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8914 (http) with context path '/'
+2025-10-20 12:39:18 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Started UssdreportsanalyserApplication in 5.275 seconds (process running for 5.879)
+2025-10-20 12:39:36 [http-nio-8914-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-20 12:39:36 [http-nio-8914-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-20 12:39:36 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2025-10-20 12:39:36 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2025-10-20 12:39:36 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2025-10-20 12:39:36 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@472e801c
+2025-10-20 12:39:36 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2b0f402c
+2025-10-20 12:39:36 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-10-20 12:39:36 [http-nio-8914-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-10-20 12:39:36 [http-nio-8914-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /
+2025-10-20 12:39:36 [http-nio-8914-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:39:36 [http-nio-8914-exec-1] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:39:36 [http-nio-8914-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-10-20 12:39:36 [http-nio-8914-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 12:39:36 [http-nio-8914-exec-1] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 12:41:09 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-10-20 12:41:09 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-20 12:41:09 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-10-20 12:41:09 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 12:41:09 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-20 12:41:09 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-20 12:41:09 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Starting UssdreportsanalyserApplication using Java 17.0.14 with PID 18633 (/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes started by benedicttapfuma in /Users/benedicttapfuma/IdeaProjects/usdreportsanalyser)
+2025-10-20 12:41:09 [restartedMain] DEBUG z.c.n.u.UssdreportsanalyserApplication - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-20 12:41:09 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-20 12:41:09 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-20 12:41:09 [restartedMain] DEBUG o.s.d.r.c.RepositoryConfigurationDelegate - Scanning for JPA repositories in packages zw.co.netone.ussdreportsanalyser.
+2025-10-20 12:41:09 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/RoleRepository.class]
+2025-10-20 12:41:09 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/UserRepository.class]
+2025-10-20 12:41:09 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+2025-10-20 12:41:10 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8914 (http)
+2025-10-20 12:41:10 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-20 12:41:10 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-20 12:41:10 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-20 12:41:10 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 578 ms
+2025-10-20 12:41:10 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-20 12:41:10 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-20 12:41:10 [restartedMain] INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2025-10-20 12:41:10 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-20 12:41:10 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-10-20 12:41:10 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4efd7743
+2025-10-20 12:41:10 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-10-20 12:41:10 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-20 12:41:10 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-10-20 12:41:10 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-20 12:41:10 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.Shop
+2025-10-20 12:41:10 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.User
+2025-10-20 12:41:10 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-20 12:41:10 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 12:41:10 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Initializing JpaMetamodelMappingContext…
+2025-10-20 12:41:10 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Finished initializing JpaMetamodelMappingContext
+2025-10-20 12:41:10 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository…
+2025-10-20 12:41:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrue'
+2025-10-20 12:41:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrue
+2025-10-20 12:41:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByEmail'
+2025-10-20 12:41:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByEmail
+2025-10-20 12:41:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByCellNumber'
+2025-10-20 12:41:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByCellNumber
+2025-10-20 12:41:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByUsername'
+2025-10-20 12:41:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByUsername
+2025-10-20 12:41:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrueAndRole_Id'
+2025-10-20 12:41:10 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrueAndRole_Id
+2025-10-20 12:41:10 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository.
+2025-10-20 12:41:10 [restartedMain] DEBUG z.c.n.u.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-10-20 12:41:10 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController' defined in file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/controller/AuthController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userServiceImpl' defined in file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/service/UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 2: No qualifying bean of type 'org.springframework.security.authentication.AuthenticationManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-10-20 12:41:10 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 12:41:10 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-10-20 12:41:10 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-10-20 12:41:10 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-10-20 12:41:10 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-20 12:41:10 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 2 of constructor in zw.co.netone.ussdreportsanalyser.service.UserServiceImpl required a bean of type 'org.springframework.security.authentication.AuthenticationManager' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.authentication.AuthenticationManager' in your configuration.
+
+2025-10-20 12:41:12 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Starting UssdreportsanalyserApplication using Java 17.0.14 with PID 18633 (/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes started by benedicttapfuma in /Users/benedicttapfuma/IdeaProjects/usdreportsanalyser)
+2025-10-20 12:41:12 [restartedMain] DEBUG z.c.n.u.UssdreportsanalyserApplication - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-20 12:41:12 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-20 12:41:12 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-20 12:41:12 [restartedMain] DEBUG o.s.d.r.c.RepositoryConfigurationDelegate - Scanning for JPA repositories in packages zw.co.netone.ussdreportsanalyser.
+2025-10-20 12:41:12 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/RoleRepository.class]
+2025-10-20 12:41:12 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/UserRepository.class]
+2025-10-20 12:41:12 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 2 JPA repository interfaces.
+2025-10-20 12:41:12 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8914 (http)
+2025-10-20 12:41:12 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-20 12:41:12 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-20 12:41:12 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-20 12:41:12 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 416 ms
+2025-10-20 12:41:12 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-20 12:41:12 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-20 12:41:12 [restartedMain] INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2025-10-20 12:41:12 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-20 12:41:12 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2025-10-20 12:41:12 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e33f948
+2025-10-20 12:41:12 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2025-10-20 12:41:12 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-20 12:41:12 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-10-20 12:41:12 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-20 12:41:12 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.Shop
+2025-10-20 12:41:12 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.User
+2025-10-20 12:41:12 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-20 12:41:12 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 12:41:12 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Initializing JpaMetamodelMappingContext…
+2025-10-20 12:41:12 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Finished initializing JpaMetamodelMappingContext
+2025-10-20 12:41:12 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository…
+2025-10-20 12:41:12 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrue'
+2025-10-20 12:41:12 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrue
+2025-10-20 12:41:12 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByEmail'
+2025-10-20 12:41:12 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByEmail
+2025-10-20 12:41:12 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByCellNumber'
+2025-10-20 12:41:12 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByCellNumber
+2025-10-20 12:41:12 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByUsername'
+2025-10-20 12:41:12 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByUsername
+2025-10-20 12:41:12 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrueAndRole_Id'
+2025-10-20 12:41:12 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrueAndRole_Id
+2025-10-20 12:41:12 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository.
+2025-10-20 12:41:12 [restartedMain] DEBUG z.c.n.u.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-10-20 12:41:12 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name activeDirectoryLdapAuthenticationProvider
+2025-10-20 12:41:12 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-20 12:41:12 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository…
+2025-10-20 12:41:12 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'Role.findByName'
+2025-10-20 12:41:12 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Role.findByName
+2025-10-20 12:41:12 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository.
+2025-10-20 12:41:13 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-10-20 12:41:13 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-10-20 12:41:13 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-20 12:41:13 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-20 12:41:13 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-20 12:41:13 [restartedMain] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-10-20 12:41:13 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-10-20 12:41:13 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8914 (http) with context path '/'
+2025-10-20 12:41:13 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Started UssdreportsanalyserApplication in 1.082 seconds (process running for 121.052)
+2025-10-20 12:41:13 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-10-20 12:59:12 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-20 12:59:12 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-10-20 12:59:12 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 12:59:12 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2025-10-20 12:59:12 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2025-10-20 12:59:16 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Starting UssdreportsanalyserApplication using Java 17.0.14 with PID 19452 (/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes started by benedicttapfuma in /Users/benedicttapfuma/IdeaProjects/usdreportsanalyser)
+2025-10-20 12:59:16 [restartedMain] DEBUG z.c.n.u.UssdreportsanalyserApplication - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-20 12:59:16 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-20 12:59:16 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-20 12:59:16 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-20 12:59:17 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-20 12:59:17 [restartedMain] DEBUG o.s.d.r.c.RepositoryConfigurationDelegate - Scanning for JPA repositories in packages zw.co.netone.ussdreportsanalyser.
+2025-10-20 12:59:17 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/RoleRepository.class]
+2025-10-20 12:59:17 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/UserRepository.class]
+2025-10-20 12:59:17 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+2025-10-20 12:59:17 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8914 (http)
+2025-10-20 12:59:17 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-20 12:59:17 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-20 12:59:17 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-20 12:59:17 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1465 ms
+2025-10-20 12:59:18 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-20 12:59:18 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-20 12:59:18 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-20 12:59:18 [restartedMain] INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2025-10-20 12:59:18 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-20 12:59:18 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-20 12:59:18 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@739231b6
+2025-10-20 12:59:18 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-20 12:59:18 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-20 12:59:18 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-10-20 12:59:18 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-20 12:59:19 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.Shop
+2025-10-20 12:59:19 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.User
+2025-10-20 12:59:19 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-20 12:59:20 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 12:59:20 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Initializing JpaMetamodelMappingContext…
+2025-10-20 12:59:20 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Finished initializing JpaMetamodelMappingContext
+2025-10-20 12:59:20 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository…
+2025-10-20 12:59:20 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByUsername'
+2025-10-20 12:59:20 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByUsername
+2025-10-20 12:59:20 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrue'
+2025-10-20 12:59:20 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrue
+2025-10-20 12:59:20 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByEmail'
+2025-10-20 12:59:20 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByEmail
+2025-10-20 12:59:20 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByCellNumber'
+2025-10-20 12:59:20 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByCellNumber
+2025-10-20 12:59:20 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrueAndRole_Id'
+2025-10-20 12:59:20 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrueAndRole_Id
+2025-10-20 12:59:20 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository.
+2025-10-20 12:59:20 [restartedMain] DEBUG z.c.n.u.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-10-20 12:59:20 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name activeDirectoryLdapAuthenticationProvider
+2025-10-20 12:59:20 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-20 12:59:20 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository…
+2025-10-20 12:59:20 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'Role.findByName'
+2025-10-20 12:59:20 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Role.findByName
+2025-10-20 12:59:20 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository.
+2025-10-20 12:59:20 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-10-20 12:59:20 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-10-20 12:59:20 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-20 12:59:21 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-20 12:59:21 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-20 12:59:21 [restartedMain] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-10-20 12:59:21 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-10-20 12:59:21 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8914 (http) with context path '/'
+2025-10-20 12:59:21 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Started UssdreportsanalyserApplication in 5.723 seconds (process running for 6.734)
+2025-10-20 13:14:19 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-10-20 13:14:19 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-20 13:14:19 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-10-20 13:14:19 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 13:14:19 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-20 13:14:19 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-20 13:14:20 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Starting UssdreportsanalyserApplication using Java 17.0.14 with PID 19452 (/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes started by benedicttapfuma in /Users/benedicttapfuma/IdeaProjects/usdreportsanalyser)
+2025-10-20 13:14:20 [restartedMain] DEBUG z.c.n.u.UssdreportsanalyserApplication - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-20 13:14:20 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-20 13:14:20 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-20 13:14:20 [restartedMain] DEBUG o.s.d.r.c.RepositoryConfigurationDelegate - Scanning for JPA repositories in packages zw.co.netone.ussdreportsanalyser.
+2025-10-20 13:14:20 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/RoleRepository.class]
+2025-10-20 13:14:20 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/UserRepository.class]
+2025-10-20 13:14:20 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+2025-10-20 13:14:20 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8914 (http)
+2025-10-20 13:14:20 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-20 13:14:20 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-20 13:14:20 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-20 13:14:20 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 629 ms
+2025-10-20 13:14:20 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-20 13:14:20 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-20 13:14:20 [restartedMain] INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2025-10-20 13:14:20 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-20 13:14:20 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-10-20 13:14:20 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43f0e2a8
+2025-10-20 13:14:20 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-10-20 13:14:20 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-20 13:14:20 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-10-20 13:14:20 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-20 13:14:20 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.Shop
+2025-10-20 13:14:20 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.User
+2025-10-20 13:14:20 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-20 13:14:21 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Initializing JpaMetamodelMappingContext…
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Finished initializing JpaMetamodelMappingContext
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository…
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByUsername'
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByUsername
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrue'
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrue
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByEmail'
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByEmail
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByCellNumber'
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByCellNumber
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrueAndRole_Id'
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrueAndRole_Id
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository.
+2025-10-20 13:14:21 [restartedMain] DEBUG z.c.n.u.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-10-20 13:14:21 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name activeDirectoryLdapAuthenticationProvider
+2025-10-20 13:14:21 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository…
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'Role.findByName'
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Role.findByName
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository.
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-20 13:14:21 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-20 13:14:21 [restartedMain] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-10-20 13:14:21 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-10-20 13:14:21 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8914 (http) with context path '/'
+2025-10-20 13:14:21 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Started UssdreportsanalyserApplication in 1.424 seconds (process running for 906.805)
+2025-10-20 13:14:21 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-10-20 13:14:22 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-10-20 13:14:22 [Thread-7] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-20 13:14:22 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-10-20 13:14:22 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 13:14:22 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-10-20 13:14:22 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-10-20 13:14:22 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Starting UssdreportsanalyserApplication using Java 17.0.14 with PID 19452 (/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes started by benedicttapfuma in /Users/benedicttapfuma/IdeaProjects/usdreportsanalyser)
+2025-10-20 13:14:22 [restartedMain] DEBUG z.c.n.u.UssdreportsanalyserApplication - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-20 13:14:22 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-20 13:14:23 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.d.r.c.RepositoryConfigurationDelegate - Scanning for JPA repositories in packages zw.co.netone.ussdreportsanalyser.
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/RoleRepository.class]
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/UserRepository.class]
+2025-10-20 13:14:23 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+2025-10-20 13:14:23 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8914 (http)
+2025-10-20 13:14:23 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-20 13:14:23 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-20 13:14:23 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-20 13:14:23 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 391 ms
+2025-10-20 13:14:23 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-20 13:14:23 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-20 13:14:23 [restartedMain] INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2025-10-20 13:14:23 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-20 13:14:23 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2025-10-20 13:14:23 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@693a8e31
+2025-10-20 13:14:23 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2025-10-20 13:14:23 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-20 13:14:23 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-10-20 13:14:23 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-20 13:14:23 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.Shop
+2025-10-20 13:14:23 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.User
+2025-10-20 13:14:23 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-20 13:14:23 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Initializing JpaMetamodelMappingContext…
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Finished initializing JpaMetamodelMappingContext
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository…
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByUsername'
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByUsername
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrue'
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrue
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByEmail'
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByEmail
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByCellNumber'
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByCellNumber
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrueAndRole_Id'
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrueAndRole_Id
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository.
+2025-10-20 13:14:23 [restartedMain] DEBUG z.c.n.u.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-10-20 13:14:23 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name activeDirectoryLdapAuthenticationProvider
+2025-10-20 13:14:23 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository…
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'Role.findByName'
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Role.findByName
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository.
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-20 13:14:23 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-20 13:14:23 [restartedMain] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-10-20 13:14:23 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-10-20 13:14:23 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8914 (http) with context path '/'
+2025-10-20 13:14:23 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Started UssdreportsanalyserApplication in 0.951 seconds (process running for 909.209)
+2025-10-20 13:14:23 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-10-20 13:14:26 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-20 13:14:26 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-10-20 13:14:26 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 13:14:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2025-10-20 13:14:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2025-10-20 13:14:29 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Starting UssdreportsanalyserApplication using Java 17.0.14 with PID 20128 (/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes started by benedicttapfuma in /Users/benedicttapfuma/IdeaProjects/usdreportsanalyser)
+2025-10-20 13:14:29 [restartedMain] DEBUG z.c.n.u.UssdreportsanalyserApplication - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-20 13:14:29 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-20 13:14:29 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-20 13:14:29 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-20 13:14:30 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-20 13:14:30 [restartedMain] DEBUG o.s.d.r.c.RepositoryConfigurationDelegate - Scanning for JPA repositories in packages zw.co.netone.ussdreportsanalyser.
+2025-10-20 13:14:30 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/RoleRepository.class]
+2025-10-20 13:14:30 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/UserRepository.class]
+2025-10-20 13:14:30 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces.
+2025-10-20 13:14:30 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8914 (http)
+2025-10-20 13:14:30 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-20 13:14:30 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-20 13:14:31 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-20 13:14:31 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1380 ms
+2025-10-20 13:14:31 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-20 13:14:31 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-20 13:14:31 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-20 13:14:31 [restartedMain] INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2025-10-20 13:14:31 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-20 13:14:31 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-20 13:14:31 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b3ee992
+2025-10-20 13:14:31 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-20 13:14:31 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-20 13:14:31 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-10-20 13:14:31 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-20 13:14:31 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.Shop
+2025-10-20 13:14:31 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.User
+2025-10-20 13:14:32 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-20 13:14:32 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 13:14:32 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Initializing JpaMetamodelMappingContext…
+2025-10-20 13:14:32 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Finished initializing JpaMetamodelMappingContext
+2025-10-20 13:14:32 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository…
+2025-10-20 13:14:32 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrueAndRole_Id'
+2025-10-20 13:14:32 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrueAndRole_Id
+2025-10-20 13:14:32 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByUsername'
+2025-10-20 13:14:32 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByUsername
+2025-10-20 13:14:32 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrue'
+2025-10-20 13:14:32 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrue
+2025-10-20 13:14:32 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByEmail'
+2025-10-20 13:14:32 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByEmail
+2025-10-20 13:14:32 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByCellNumber'
+2025-10-20 13:14:32 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByCellNumber
+2025-10-20 13:14:32 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository.
+2025-10-20 13:14:32 [restartedMain] DEBUG z.c.n.u.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-10-20 13:14:32 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name activeDirectoryLdapAuthenticationProvider
+2025-10-20 13:14:32 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-20 13:14:32 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository…
+2025-10-20 13:14:32 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'Role.findByName'
+2025-10-20 13:14:32 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Role.findByName
+2025-10-20 13:14:32 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository.
+2025-10-20 13:14:33 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2025-10-20 13:14:33 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-10-20 13:14:33 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-20 13:14:33 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-20 13:14:33 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-20 13:14:33 [restartedMain] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-10-20 13:14:33 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-10-20 13:14:33 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8914 (http) with context path '/'
+2025-10-20 13:14:33 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Started UssdreportsanalyserApplication in 4.559 seconds (process running for 5.479)
+2025-10-20 13:26:51 [http-nio-8914-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-20 13:26:51 [http-nio-8914-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-20 13:26:51 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2025-10-20 13:26:51 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2025-10-20 13:26:51 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2025-10-20 13:26:51 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2d379747
+2025-10-20 13:26:51 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@6248d2cc
+2025-10-20 13:26:51 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-10-20 13:26:51 [http-nio-8914-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 35 ms
+2025-10-20 13:26:51 [http-nio-8914-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/
+2025-10-20 13:26:51 [http-nio-8914-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 13:26:51 [http-nio-8914-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/
+2025-10-20 13:26:51 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/", parameters={}
+2025-10-20 13:26:51 [http-nio-8914-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-20 13:26:51 [http-nio-8914-exec-1] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2025-10-20 13:26:51 [http-nio-8914-exec-1] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource swagger-ui.]
+2025-10-20 13:26:51 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2025-10-20 13:26:51 [http-nio-8914-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-10-20 13:26:51 [http-nio-8914-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /error
+2025-10-20 13:26:51 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2025-10-20 13:26:51 [http-nio-8914-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2025-10-20 13:26:51 [http-nio-8914-exec-1] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, text/html;q=0.8]
+2025-10-20 13:26:51 [http-nio-8914-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2025-10-20 13:26:51 [http-nio-8914-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 13:26:52 [http-nio-8914-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2025-10-20 13:26:52 [http-nio-8914-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 13:26:52 [http-nio-8914-exec-2] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 13:26:52 [http-nio-8914-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-10-20 13:26:52 [http-nio-8914-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /error
+2025-10-20 13:26:52 [http-nio-8914-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2025-10-20 13:26:52 [http-nio-8914-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-10-20 13:26:52 [http-nio-8914-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json, application/yaml]
+2025-10-20 13:26:52 [http-nio-8914-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Mon Oct 20 13:26:52 CAT 2025, status=403, error=Forbidden, message=Forbidden, path=/favic (truncated)...]
+2025-10-20 13:26:52 [http-nio-8914-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 403
+2025-10-20 13:26:52 [http-nio-8914-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 13:27:07 [http-nio-8914-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/index.html
+2025-10-20 13:27:07 [http-nio-8914-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 13:27:07 [http-nio-8914-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/index.html
+2025-10-20 13:27:07 [http-nio-8914-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/index.html", parameters={}
+2025-10-20 13:27:07 [http-nio-8914-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-20 13:27:07 [http-nio-8914-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-20 13:27:07 [http-nio-8914-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui.css
+2025-10-20 13:27:07 [http-nio-8914-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 13:27:07 [http-nio-8914-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui.css
+2025-10-20 13:27:07 [http-nio-8914-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui.css", parameters={}
+2025-10-20 13:27:07 [http-nio-8914-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-20 13:27:07 [http-nio-8914-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/index.css
+2025-10-20 13:27:07 [http-nio-8914-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-bundle.js
+2025-10-20 13:27:07 [http-nio-8914-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 13:27:07 [http-nio-8914-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/index.css
+2025-10-20 13:27:07 [http-nio-8914-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 13:27:07 [http-nio-8914-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/index.css", parameters={}
+2025-10-20 13:27:07 [http-nio-8914-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-initializer.js
+2025-10-20 13:27:07 [http-nio-8914-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-bundle.js
+2025-10-20 13:27:07 [http-nio-8914-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 13:27:07 [http-nio-8914-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui-bundle.js", parameters={}
+2025-10-20 13:27:07 [http-nio-8914-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-20 13:27:07 [http-nio-8914-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-standalone-preset.js
+2025-10-20 13:27:07 [http-nio-8914-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-initializer.js
+2025-10-20 13:27:07 [http-nio-8914-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-20 13:27:07 [http-nio-8914-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 13:27:07 [http-nio-8914-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-initializer.js", parameters={}
+2025-10-20 13:27:07 [http-nio-8914-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-20 13:27:07 [http-nio-8914-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-standalone-preset.js
+2025-10-20 13:27:07 [http-nio-8914-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
+2025-10-20 13:27:07 [http-nio-8914-exec-8] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-20 13:27:07 [http-nio-8914-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-20 13:27:07 [http-nio-8914-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-20 13:27:07 [http-nio-8914-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-20 13:27:07 [http-nio-8914-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-20 13:27:07 [http-nio-8914-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-20 13:27:07 [http-nio-8914-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /v3/api-docs/swagger-config
+2025-10-20 13:27:07 [http-nio-8914-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 13:27:07 [http-nio-8914-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/favicon-32x32.png
+2025-10-20 13:27:07 [http-nio-8914-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 13:27:07 [http-nio-8914-exec-9] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-10-20 13:27:07 [http-nio-8914-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/favicon-32x32.png
+2025-10-20 13:27:07 [http-nio-8914-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/favicon-32x32.png", parameters={}
+2025-10-20 13:27:07 [http-nio-8914-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-20 13:27:07 [http-nio-8914-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+2025-10-20 13:27:07 [http-nio-8914-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /error
+2025-10-20 13:27:07 [http-nio-8914-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2025-10-20 13:27:07 [http-nio-8914-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-10-20 13:27:07 [http-nio-8914-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-10-20 13:27:07 [http-nio-8914-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Mon Oct 20 13:27:07 CAT 2025, status=403, error=Forbidden, message=Forbidden, path=/v3/ap (truncated)...]
+2025-10-20 13:27:07 [http-nio-8914-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-20 13:27:07 [http-nio-8914-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 403
+2025-10-20 13:27:07 [http-nio-8914-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-20 13:28:42 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-20 13:28:42 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-10-20 13:28:42 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 13:28:42 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-20 13:28:42 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-20 13:28:46 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Starting UssdreportsanalyserApplication using Java 17.0.14 with PID 20690 (/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes started by benedicttapfuma in /Users/benedicttapfuma/IdeaProjects/usdreportsanalyser)
+2025-10-20 13:28:46 [restartedMain] DEBUG z.c.n.u.UssdreportsanalyserApplication - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-20 13:28:46 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-20 13:28:46 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-20 13:28:46 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-20 13:28:48 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-20 13:28:48 [restartedMain] DEBUG o.s.d.r.c.RepositoryConfigurationDelegate - Scanning for JPA repositories in packages zw.co.netone.ussdreportsanalyser.
+2025-10-20 13:28:48 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/RoleRepository.class]
+2025-10-20 13:28:48 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/UserRepository.class]
+2025-10-20 13:28:48 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 2 JPA repository interfaces.
+2025-10-20 13:28:48 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8914 (http)
+2025-10-20 13:28:48 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-20 13:28:48 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-20 13:28:48 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-20 13:28:48 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1942 ms
+2025-10-20 13:28:48 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-20 13:28:48 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-20 13:28:48 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-20 13:28:49 [restartedMain] INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2025-10-20 13:28:49 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-20 13:28:49 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-20 13:28:49 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@363da1d5
+2025-10-20 13:28:49 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-20 13:28:49 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-20 13:28:49 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-10-20 13:28:49 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-20 13:28:49 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.Shop
+2025-10-20 13:28:49 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.User
+2025-10-20 13:28:50 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-20 13:28:50 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 13:28:50 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Initializing JpaMetamodelMappingContext…
+2025-10-20 13:28:50 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Finished initializing JpaMetamodelMappingContext
+2025-10-20 13:28:50 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository…
+2025-10-20 13:28:50 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrueAndRole_Id'
+2025-10-20 13:28:50 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrueAndRole_Id
+2025-10-20 13:28:50 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByUsername'
+2025-10-20 13:28:50 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByUsername
+2025-10-20 13:28:50 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrue'
+2025-10-20 13:28:50 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrue
+2025-10-20 13:28:50 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByEmail'
+2025-10-20 13:28:50 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByEmail
+2025-10-20 13:28:50 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByCellNumber'
+2025-10-20 13:28:50 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByCellNumber
+2025-10-20 13:28:50 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository.
+2025-10-20 13:28:50 [restartedMain] DEBUG z.c.n.u.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-10-20 13:28:51 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name activeDirectoryLdapAuthenticationProvider
+2025-10-20 13:28:51 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-20 13:28:51 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository…
+2025-10-20 13:28:51 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'Role.findByName'
+2025-10-20 13:28:51 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Role.findByName
+2025-10-20 13:28:51 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository.
+2025-10-20 13:28:51 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 16 mappings in 'requestMappingHandlerMapping'
+2025-10-20 13:28:51 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-10-20 13:28:51 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-20 13:28:51 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-10-20 13:28:51 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-20 13:28:51 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-20 13:28:51 [restartedMain] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-10-20 13:28:51 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8914 (http) with context path '/'
+2025-10-20 13:28:51 [restartedMain] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-20 13:28:51 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-10-20 13:28:51 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'
+2025-10-20 13:28:51 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 13:28:51 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-20 13:28:51 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-20 13:28:51 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-20 13:28:51 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:408)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:394)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:586)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:364)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:310)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:1006)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:630)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at zw.co.netone.ussdreportsanalyser.UssdreportsanalyserApplication.main(UssdreportsanalyserApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.springframework.web.servlet.mvc.condition.PatternsRequestCondition.getPatterns()" because "this.condition" is null
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.base/java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:473)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1307)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1721)
+	at java.base/java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:392)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:405)
+	... 19 common frames omitted
+2025-10-20 13:31:20 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Starting UssdreportsanalyserApplication using Java 17.0.14 with PID 20789 (/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes started by benedicttapfuma in /Users/benedicttapfuma/IdeaProjects/usdreportsanalyser)
+2025-10-20 13:31:20 [restartedMain] DEBUG z.c.n.u.UssdreportsanalyserApplication - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-20 13:31:20 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-20 13:31:20 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-20 13:31:20 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-20 13:31:21 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-20 13:31:21 [restartedMain] DEBUG o.s.d.r.c.RepositoryConfigurationDelegate - Scanning for JPA repositories in packages zw.co.netone.ussdreportsanalyser.
+2025-10-20 13:31:21 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/RoleRepository.class]
+2025-10-20 13:31:21 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/UserRepository.class]
+2025-10-20 13:31:21 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
+2025-10-20 13:31:22 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8914 (http)
+2025-10-20 13:31:22 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-20 13:31:22 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-20 13:31:22 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-20 13:31:22 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2023 ms
+2025-10-20 13:31:22 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-20 13:31:22 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-20 13:31:23 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-20 13:31:23 [restartedMain] INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2025-10-20 13:31:23 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-20 13:31:23 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-20 13:31:23 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43ee0437
+2025-10-20 13:31:23 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-20 13:31:23 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-20 13:31:23 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-10-20 13:31:23 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-20 13:31:23 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.Shop
+2025-10-20 13:31:23 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.User
+2025-10-20 13:31:24 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-20 13:31:25 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 13:31:25 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Initializing JpaMetamodelMappingContext…
+2025-10-20 13:31:25 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Finished initializing JpaMetamodelMappingContext
+2025-10-20 13:31:25 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository…
+2025-10-20 13:31:25 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByUsername'
+2025-10-20 13:31:25 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByUsername
+2025-10-20 13:31:25 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrue'
+2025-10-20 13:31:25 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrue
+2025-10-20 13:31:25 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByEmail'
+2025-10-20 13:31:25 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByEmail
+2025-10-20 13:31:25 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByCellNumber'
+2025-10-20 13:31:25 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByCellNumber
+2025-10-20 13:31:25 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrueAndRole_Id'
+2025-10-20 13:31:25 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrueAndRole_Id
+2025-10-20 13:31:25 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository.
+2025-10-20 13:31:25 [restartedMain] DEBUG z.c.n.u.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-10-20 13:31:25 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name activeDirectoryLdapAuthenticationProvider
+2025-10-20 13:31:25 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-20 13:31:25 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository…
+2025-10-20 13:31:25 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'Role.findByName'
+2025-10-20 13:31:25 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Role.findByName
+2025-10-20 13:31:25 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository.
+2025-10-20 13:31:26 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 16 mappings in 'requestMappingHandlerMapping'
+2025-10-20 13:31:26 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-10-20 13:31:26 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-20 13:31:26 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-10-20 13:31:26 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-20 13:31:26 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-20 13:31:26 [restartedMain] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-10-20 13:31:27 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8914 (http) with context path '/'
+2025-10-20 13:31:27 [restartedMain] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-20 13:31:27 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-10-20 13:31:27 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'
+2025-10-20 13:31:27 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 13:31:27 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-20 13:31:27 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-20 13:31:27 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-20 13:31:27 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:408)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:394)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:586)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:364)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:310)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:1006)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:630)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at zw.co.netone.ussdreportsanalyser.UssdreportsanalyserApplication.main(UssdreportsanalyserApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.springframework.web.servlet.mvc.condition.PatternsRequestCondition.getPatterns()" because "this.condition" is null
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.base/java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:473)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1307)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1721)
+	at java.base/java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:392)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:405)
+	... 19 common frames omitted
+2025-10-20 14:11:03 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - Starting UssdreportsanalyserApplication using Java 17.0.14 with PID 22338 (/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes started by benedicttapfuma in /Users/benedicttapfuma/IdeaProjects/usdreportsanalyser)
+2025-10-20 14:11:03 [restartedMain] DEBUG z.c.n.u.UssdreportsanalyserApplication - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-20 14:11:03 [restartedMain] INFO  z.c.n.u.UssdreportsanalyserApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-20 14:11:03 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-20 14:11:03 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-20 14:11:05 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-20 14:11:05 [restartedMain] DEBUG o.s.d.r.c.RepositoryConfigurationDelegate - Scanning for JPA repositories in packages zw.co.netone.ussdreportsanalyser.
+2025-10-20 14:11:06 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/RoleRepository.class]
+2025-10-20 14:11:06 [restartedMain] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [/Users/benedicttapfuma/IdeaProjects/usdreportsanalyser/target/classes/zw/co/netone/ussdreportsanalyser/repository/UserRepository.class]
+2025-10-20 14:11:06 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 161 ms. Found 2 JPA repository interfaces.
+2025-10-20 14:11:07 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8914 (http)
+2025-10-20 14:11:07 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-20 14:11:07 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-20 14:11:07 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-20 14:11:07 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3725 ms
+2025-10-20 14:11:07 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-20 14:11:07 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-20 14:11:07 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-20 14:11:08 [restartedMain] INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2025-10-20 14:11:08 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-20 14:11:08 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-20 14:11:09 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@95a9ab7
+2025-10-20 14:11:09 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-20 14:11:09 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-20 14:11:09 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-10-20 14:11:09 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-20 14:11:09 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.Shop
+2025-10-20 14:11:09 [restartedMain] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: zw.co.netone.ussdreportsanalyser.model.User
+2025-10-20 14:11:11 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-20 14:11:11 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 14:11:11 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Initializing JpaMetamodelMappingContext…
+2025-10-20 14:11:11 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Finished initializing JpaMetamodelMappingContext
+2025-10-20 14:11:11 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository…
+2025-10-20 14:11:11 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrueAndRole_Id'
+2025-10-20 14:11:11 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrueAndRole_Id
+2025-10-20 14:11:11 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findAllByActiveStatusTrue'
+2025-10-20 14:11:11 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findAllByActiveStatusTrue
+2025-10-20 14:11:11 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByEmail'
+2025-10-20 14:11:11 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByEmail
+2025-10-20 14:11:11 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByCellNumber'
+2025-10-20 14:11:11 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByCellNumber
+2025-10-20 14:11:11 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'User.findByUsername'
+2025-10-20 14:11:11 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByUsername
+2025-10-20 14:11:11 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.UserRepository.
+2025-10-20 14:11:11 [restartedMain] DEBUG z.c.n.u.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-10-20 14:11:11 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name activeDirectoryLdapAuthenticationProvider
+2025-10-20 14:11:11 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-10-20 14:11:11 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Initializing repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository…
+2025-10-20 14:11:11 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query 'Role.findByName'
+2025-10-20 14:11:11 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Role.findByName
+2025-10-20 14:11:11 [restartedMain] DEBUG o.s.d.r.c.s.RepositoryFactorySupport - Finished creation of repository instance for zw.co.netone.ussdreportsanalyser.repository.RoleRepository.
+2025-10-20 14:11:12 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 16 mappings in 'requestMappingHandlerMapping'
+2025-10-20 14:11:12 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-10-20 14:11:12 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-20 14:11:12 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-10-20 14:11:12 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-20 14:11:12 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-20 14:11:13 [restartedMain] INFO  o.s.l.c.s.AbstractContextSource - Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-10-20 14:11:13 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8914 (http) with context path '/'
+2025-10-20 14:11:13 [restartedMain] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-20 14:11:13 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-10-20 14:11:13 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'
+2025-10-20 14:11:13 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-20 14:11:13 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-20 14:11:13 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-20 14:11:13 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-20 14:11:13 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:408)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:394)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:586)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:364)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:310)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:1006)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:630)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at zw.co.netone.ussdreportsanalyser.UssdreportsanalyserApplication.main(UssdreportsanalyserApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.springframework.web.servlet.mvc.condition.PatternsRequestCondition.getPatterns()" because "this.condition" is null
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.base/java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:473)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1307)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1721)
+	at java.base/java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:392)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:405)
+	... 19 common frames omitted

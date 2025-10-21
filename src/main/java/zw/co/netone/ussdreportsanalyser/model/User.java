@@ -27,8 +27,8 @@ public class User extends RootEntity implements UserDetails {
     private String email;
     private String username;
 
-    @ManyToOne
-    private Office office;
+    @ManyToOne(optional = false)
+    private Shop shop;
 
     private String cellNumber;
 

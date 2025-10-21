@@ -11,21 +11,23 @@ import static org.hibernate.envers.RelationTargetAuditMode.NOT_AUDITED;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @Entity
-@Table(name = "offices")
+@Table(name = "shops")
 @Audited(targetAuditMode = NOT_AUDITED, withModifiedFlag = true)
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Office extends  RootEntity {
+public class Shop extends RootEntity {
+    @Column(name = "shop_id", unique = true, nullable = false)
+    private String shopId;
 
-    @Column(nullable = false, length = 100)
+    @Column(nullable = false,unique = true, length = 100)
     private String name;
 
     @Column(nullable = false, length = 200)
-    private String address;
+    private String location;
 
     @Column(length = 20)
-    private String phoneNumber;
+    private String zone;
 
     @Column(nullable = false)
     @Builder.Default

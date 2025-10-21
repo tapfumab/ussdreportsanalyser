@@ -5,7 +5,7 @@ public record RegisterUserRequest(
         String lastName,
         String email,
         String username,
-        String office,
+        String shop,
         String cellNumber,
         String role
 ) { }

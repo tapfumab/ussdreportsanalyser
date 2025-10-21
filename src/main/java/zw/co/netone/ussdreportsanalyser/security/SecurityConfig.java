@@ -1,6 +1,7 @@
 package zw.co.netone.ussdreportsanalyser.security;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -26,20 +27,33 @@ import zw.co.netone.ussdreportsanalyser.security.properties.ActiveDirectoryPrope
 @EnableWebSecurity
 @RequiredArgsConstructor
 public class SecurityConfig {
+    private static final String[] SWAGGER_WHITELIST = {
+            "/v2/api-docs",
+            "/swagger-resources",
+            "/swagger-resources/**",
+            "/configuration/ui",
+            "/configuration/security",
+            "/swagger-ui.html",
+            "/webjars/**",
+            "/v3/api-docs/**",
+            "/swagger-ui/**",
+            "/api-docs/**"
+    };
     private final UserDetailsService myUserDetailsService;
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http, CorsConfigurationSource corsConfigurationSource) throws Exception {
-          return http.cors(cors -> cors.configurationSource(corsConfigurationSource))
-                  .csrf(AbstractHttpConfigurer::disable)
-                  .authorizeHttpRequests(request -> request.requestMatchers("/login/**").permitAll()
-                          .requestMatchers("/register/**", "/user/delete/**", "/user/update/**", "/user/all", "/user/by-id/{id}")
-                          .hasAnyRole("ADMIN", "SUPERVISOR")
-                          .requestMatchers("/swagger-ui/**", "/v2/api-docs", "/swagger-resources/**", "/webjars/**")
-                          .permitAll()
-                          .anyRequest()
-                          .authenticated()
-                ).userDetailsService(myUserDetailsService)
+        return http.cors(cors -> cors.configurationSource(corsConfigurationSource))
+                .csrf(AbstractHttpConfigurer::disable)
+                .authorizeHttpRequests(request -> request.requestMatchers("/login/**","/register/**").permitAll()
+                        .requestMatchers( "/user/delete/**", "/user/update/**", "/user/all", "/user/by-id/{id}")
+                        .hasAnyRole("ADMIN", "SUPERVISOR")
+                        .requestMatchers(SWAGGER_WHITELIST).permitAll()
+                        .anyRequest()
+                        .authenticated()
+                )
+                .userDetailsService(myUserDetailsService)
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
@@ -53,7 +67,7 @@ public class SecurityConfig {
 
     @Bean
     public ActiveDirectoryLdapAuthenticationProvider activeDirectoryLdapAuthenticationProvider(
-            ActiveDirectoryProperties activeDirectoryProperties, UserRepository userRepository){
+            ActiveDirectoryProperties activeDirectoryProperties, UserRepository userRepository) {
 
         ActiveDirectoryLdapAuthenticationProvider provider = new ActiveDirectoryLdapAuthenticationProvider(
                 activeDirectoryProperties.getDomain(),
@@ -67,7 +81,7 @@ public class SecurityConfig {
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
@@ -78,7 +92,7 @@ public class SecurityConfig {
         configuration.addAllowedMethod("*");
         configuration.addAllowedHeader("*");
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**",configuration);
+        source.registerCorsConfiguration("/**", configuration);
         return source;
     }
 
