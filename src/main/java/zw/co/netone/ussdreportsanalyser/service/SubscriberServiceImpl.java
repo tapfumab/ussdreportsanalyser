@@ -20,6 +20,7 @@ import java.util.Locale;
 /**
  * Service implementation for subscriber operations
  * Following Single Responsibility Principle and Dependency Inversion
+ * @author btapfuma Oct2025
  */
 @Service
 @Slf4j
@@ -46,18 +47,14 @@ public class SubscriberServiceImpl implements SubscriberService {
     public void resetSubscriber(String msisdn, Locale locale) {
         log.info("Initiating reset for mobile number: {}", msisdn);
 
-        // Normalize and validate MSISDN
         String normalizedMsisdn = msisdnNormalizer.normalize(msisdn);
         validateMsisdn(normalizedMsisdn);
 
-        // Find subscriber
         Subscriber subscriber = findSubscriberByMsisdn(normalizedMsisdn);
         log.debug("Found subscriber for reset: ID={}, MSISDN={}", subscriber.getId(), normalizedMsisdn);
 
-        // Check eligibility
         checkResetEligibility(subscriber);
 
-        // Perform reset
         performReset(subscriber);
 
         log.info("Successfully reset subscriber with MSISDN: {}", normalizedMsisdn);
@@ -68,10 +65,8 @@ public class SubscriberServiceImpl implements SubscriberService {
     public ApiResponse<Subscriber> findByMsisdn(String msisdn) {
         log.debug("Searching for subscriber by MSISDN: {}", msisdn);
 
-        // Normalize MSISDN
         String normalizedMsisdn = msisdnNormalizer.normalize(msisdn);
 
-        // Validate MSISDN format
         SubscriberValidator.ValidationResult validationResult =
                 subscriberValidator.validateMsisdn(normalizedMsisdn);
 
@@ -80,7 +75,6 @@ public class SubscriberServiceImpl implements SubscriberService {
             return ApiResponse.failure(validationResult.getMessage(), null);
         }
 
-        // Search for subscriber
         return subscriberRepository.findByMsisdn(normalizedMsisdn)
                 .map(subscriber -> {
                     log.info("Subscriber found with MSISDN: {}", normalizedMsisdn);
@@ -92,9 +86,6 @@ public class SubscriberServiceImpl implements SubscriberService {
                 });
     }
 
-    /**
-     * Validates MSISDN format
-     */
     private void validateMsisdn(String msisdn) {
         SubscriberValidator.ValidationResult validationResult =
                 subscriberValidator.validateMsisdn(msisdn);
@@ -105,9 +96,6 @@ public class SubscriberServiceImpl implements SubscriberService {
         }
     }
 
-    /**
-     * Finds subscriber or throws exception
-     */
     private Subscriber findSubscriberByMsisdn(String msisdn) {
         return subscriberRepository.findByMsisdn(msisdn)
                 .orElseThrow(() -> {
@@ -116,9 +104,6 @@ public class SubscriberServiceImpl implements SubscriberService {
                 });
     }
 
-    /**
-     * Checks if subscriber is eligible for reset
-     */
     private void checkResetEligibility(Subscriber subscriber) {
         SubscriberResetEligibilityChecker.EligibilityResult eligibilityResult =
                 eligibilityChecker.checkEligibility(subscriber);
@@ -131,12 +116,8 @@ public class SubscriberServiceImpl implements SubscriberService {
         log.debug("Subscriber eligible for reset: {}", eligibilityResult.getReason());
     }
 
-    /**
-     * Performs the actual reset operation
-     */
     private void performReset(Subscriber subscriber) {
         try {
-            // Update audit fields
             subscriber.setLastModifiedDate(LocalDateTime.now());
             subscriber.setLastModifiedBy(currentAuditor.getUsernameOrThrow());
 

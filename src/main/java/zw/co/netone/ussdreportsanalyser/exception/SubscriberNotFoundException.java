@@ -6,9 +6,6 @@ public class SubscriberNotFoundException extends RuntimeException {
     }
 }
 
-/**
- * Exception thrown when mobile number validation fails
- */
 class InvalidMsisdnException extends RuntimeException {
     public InvalidMsisdnException(String message) {
         super(message);

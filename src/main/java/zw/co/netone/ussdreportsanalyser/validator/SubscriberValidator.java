@@ -2,9 +2,6 @@ package zw.co.netone.ussdreportsanalyser.validator;
 
 import org.springframework.stereotype.Component;
 
-/**
- * Validator for subscriber-related operations
- */
 @Component
 public class SubscriberValidator {
 
@@ -12,12 +9,7 @@ public class SubscriberValidator {
     private static final int MAX_MSISDN_LENGTH = 13;
     private static final String NUMERIC_PATTERN = "[0-9]+";
 
-    /**
-     * Validates if the MSISDN format is correct
-     *
-     * @param msisdn The mobile number to validate
-     * @return ValidationResult containing validation status and message
-     */
+
     public ValidationResult validateMsisdn(String msisdn) {
         if (msisdn == null || msisdn.trim().isEmpty()) {
             return ValidationResult.invalid("Mobile number cannot be empty");
@@ -40,9 +32,6 @@ public class SubscriberValidator {
         return ValidationResult.valid();
     }
 
-    /**
-     * Inner class to represent validation result
-     */
     public static class ValidationResult {
         private final boolean valid;
         private final String message;

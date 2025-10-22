@@ -5,9 +5,6 @@ import org.springframework.stereotype.Component;
 import zw.co.netone.ussdreportsanalyser.enums.RegistrationStatus;
 import zw.co.netone.ussdreportsanalyser.model.Subscriber;
 
-/**
- * Checks if a subscriber is eligible for reset
- */
 @Slf4j
 @Component
 public class SubscriberResetEligibilityChecker {
@@ -15,12 +12,6 @@ public class SubscriberResetEligibilityChecker {
     private static final String USSD_SOURCE = "USSD";
     private static final int MAX_ATTEMPTS_THRESHOLD = 3;
 
-    /**
-     * Check if subscriber meets all criteria for reset
-     *
-     * @param subscriber The subscriber to check
-     * @return EligibilityResult containing eligibility status and reason
-     */
     public EligibilityResult checkEligibility(Subscriber subscriber) {
         if (subscriber == null) {
             return EligibilityResult.ineligible("Subscriber not found");
@@ -50,9 +41,6 @@ public class SubscriberResetEligibilityChecker {
         return EligibilityResult.eligible();
     }
 
-    /**
-     * Result of eligibility check
-     */
     public static class EligibilityResult {
         private final boolean eligible;
         private final String reason;
