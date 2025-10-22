@@ -8,7 +8,7 @@ import java.util.List;
 @Repository
 public interface ShopRepository extends JpaRepository<Shop, Long> {
 
-    List<Shop> findAllByActiveStatusTrue();
+    List<Shop> findAllByActive(boolean active);
 
     Shop findByNameIgnoreCaseAndIdNot(String name, long id);
 

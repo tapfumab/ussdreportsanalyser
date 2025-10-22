@@ -26,7 +26,7 @@ public class ShopServiceImpl implements ShopService {
 
     @Override
     public List<Shop> findAllActive() {
-        return shopRepository.findAllByActiveStatusTrue();
+        return shopRepository.findAllByActive(true);
     }
 
     @Override
