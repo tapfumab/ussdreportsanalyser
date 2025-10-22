@@ -6,13 +6,13 @@ import zw.co.netone.ussdreportsanalyser.dto.ApiResponse;
 import zw.co.netone.ussdreportsanalyser.model.Subscriber;
 
 import java.util.List;
-import java.util.Locale;
 
 
 public interface SubscriberService {
 
+
     @Transactional
-    void resetSubscriber(String msisdn, Locale locale);
+    void resetSubscriber(String msisdn);
 
     ApiResponse<Subscriber> findByMsisdn(String msisdn);
 

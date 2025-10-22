@@ -15,7 +15,6 @@ import zw.co.netone.ussdreportsanalyser.validator.SubscriberValidator;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Locale;
 
 /**
  * Service implementation for subscriber operations
@@ -44,7 +43,7 @@ public class SubscriberServiceImpl implements SubscriberService {
 
     @Transactional
     @Override
-    public void resetSubscriber(String msisdn, Locale locale) {
+    public void resetSubscriber(String msisdn) {
         log.info("Initiating reset for mobile number: {}", msisdn);
 
         String normalizedMsisdn = msisdnNormalizer.normalize(msisdn);
