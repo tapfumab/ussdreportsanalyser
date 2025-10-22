@@ -55,7 +55,7 @@ public class UserServiceImpl implements UserService {
 
             Shop shop = null;
             if (loginRequest.shopId() != null && !loginRequest.shopId().isEmpty()) {
-                shop = shopRepository.findByOfficeId(loginRequest.shopId());
+                shop = shopRepository.findByShopId(loginRequest.shopId());
                 if (shop == null) {
                     log.error("Shop with officeId {} not found", loginRequest.shopId());
                     throw new RuntimeException("Invalid shop specified");
@@ -107,7 +107,7 @@ public class UserServiceImpl implements UserService {
                     .lastName(registrationRequest.lastName())
                     .email(registrationRequest.email())
                     .username(registrationRequest.username())
-                    .shop(shopRepository.findByOfficeId(USER_SHOP))
+                    .shop(shopRepository.findByShopId(USER_SHOP))
                     .cellNumber(registrationRequest.cellNumber())
                     .role(roleRepository.findByName(USER_ROLE))
                     .activeStatus(true)
@@ -143,7 +143,7 @@ public class UserServiceImpl implements UserService {
             user.setEmail(registrationRequest.email());
             user.setUsername(registrationRequest.username());
             user.setCellNumber(registrationRequest.cellNumber());
-            user.setShop(shopRepository.findByOfficeId(registrationRequest.shop().trim().toUpperCase()));
+            user.setShop(shopRepository.findByShopId(registrationRequest.shop().trim().toUpperCase()));
             user.setRole(roleRepository.findByName(registrationRequest.role().trim().toUpperCase()));
 
             userRepository.save(user);

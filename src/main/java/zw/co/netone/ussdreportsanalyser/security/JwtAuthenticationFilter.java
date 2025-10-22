@@ -79,7 +79,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     private boolean validateUserShopAssociation(String username, String shopId) {
         try {
-            Shop shop = shopRepository.findByOfficeId(shopId);
+            Shop shop = shopRepository.findByShopId(shopId);
             if (shop == null) {
                 log.error("Shop with officeId {} not found", shopId);
                 return false;
