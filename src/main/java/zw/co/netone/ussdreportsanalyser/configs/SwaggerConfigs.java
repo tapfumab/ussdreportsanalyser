@@ -2,6 +2,7 @@ package zw.co.netone.ussdreportsanalyser.configs;
 
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 import io.swagger.v3.oas.models.security.SecurityRequirement;
@@ -15,16 +16,16 @@ public class SwaggerConfigs {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("*554# Usage Statistics Apis")
-                        // .version("1.0")
-//                        .description("APIs For USSD Reports Analyser")
-//                        .termsOfService("https://www.netone.co.zw/terms")
-                        // .contact(new Contact()
-//                                .name("NetOne Support")
-//                                .email("support@netone.co.zw")
-//                                .url("https://www.netone.co.zw"))
-                        .license(new License()
-                                .name("Apache 2.0")
+                        .title("NetOne Services Management Apis")
+                         .version("1.0")
+                        .description("APIs For Services  Management *123#, *554#, *379#")
+                        //.termsOfService("https://www.netone.co.zw/terms")
+                         .contact(new Contact()
+                                .name(" NetOne Software Development")
+                                .email("dev@netone.co.zw")
+                               // .url("https://www.netone.co.zw"))
+                       // .license(new License()
+                              //  .name("Apache 2.0")
                                 .url("https://www.apache.org/licenses/LICENSE-2.0.html")))
                 .addSecurityItem(new SecurityRequirement().addList("Bearer Authentication"))
                 .components(new Components()
