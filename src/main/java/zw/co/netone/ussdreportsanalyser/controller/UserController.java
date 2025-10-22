@@ -28,7 +28,7 @@ public class UserController {
 
     private final UserService userService;
 
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<ApiResponse<List<UserResponse>>> getAllUsers(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
@@ -49,7 +49,7 @@ public class UserController {
         return ResponseEntity.status(status).body(response);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<AuthenticationResponse<?>> updateUser(
             @PathVariable Long id,
             @RequestBody RegisterUserRequest request) throws Exception {
@@ -57,7 +57,7 @@ public class UserController {
         return ResponseEntity.ok(userService.editUser(request, id));
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<ApiResponse<String>> deleteUser(@PathVariable Long id) {
         log.info("Request to delete user with ID: {}", id);
         return ResponseEntity.ok(userService.deleteUser(id));
