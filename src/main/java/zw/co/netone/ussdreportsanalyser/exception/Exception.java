@@ -1,5 +1,8 @@
 package zw.co.netone.ussdreportsanalyser.exception;
 
+import lombok.Getter;
+
+@Getter
 public class Exception extends  RuntimeException{
 
     private String responseCode = "500";
@@ -13,7 +16,4 @@ public class Exception extends  RuntimeException{
         super(message);
     }
 
-    public String getResponseCode() {
-        return responseCode;
-    }
 }
