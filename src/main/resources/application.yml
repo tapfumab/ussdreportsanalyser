@@ -11,9 +11,9 @@ spring:
 
 
   datasource-secondary:
-    url: jdbc:mysql://localhost:3306/ussd_services_management?autoReconnect=true&createDatabaseIfNotExist=true&useSSL=false
-    username: root
-    password: 'D3v3l@p3r'
+    url: jdbc:mysql://10.95.10.241:3306/selfcare?autoReconnect=true&createDatabaseIfNotExist=true
+    username: developer
+    password: "D3v3l@per!"
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:

@@ -6,11 +6,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import zw.co.netone.ussdreportsanalyser.dto.ApiResponse;
-import zw.co.netone.ussdreportsanalyser.model.Subscriber;
+import zw.co.netone.ussdreportsanalyser.dto.SubscriberDto;
 import zw.co.netone.ussdreportsanalyser.service.SubscriberService;
 
 import java.util.List;
 import java.util.Locale;
+import java.util.Optional;
 
 /**
  * REST Controller for subscriber operations
@@ -26,17 +27,17 @@ public class SubscriberController {
     private final SubscriberService subscriberService;
 
     @GetMapping
-    public ResponseEntity<ApiResponse<List<Subscriber>>> getAllSubscribers() {
+    public ResponseEntity<ApiResponse<Optional<List<SubscriberDto>>>> getAllSubscribers() {
         log.info("Request received to fetch all subscribers");
-        ApiResponse<List<Subscriber>> response = subscriberService.findAllSubscribers();
+        ApiResponse<Optional<List<SubscriberDto>>> response = subscriberService.findAllSubscribers();
         return ResponseEntity.ok(response);
     }
 
     @GetMapping("/search")
-    public ResponseEntity<ApiResponse<Subscriber>> findByMsisdn(
+    public ResponseEntity<ApiResponse<SubscriberDto>> findByMsisdn(
             @RequestParam String msisdn) {
         log.info("Request received to find subscriber by MSISDN: {}", msisdn);
-        ApiResponse<Subscriber> response = subscriberService.findByMsisdn(msisdn);
+        ApiResponse<SubscriberDto> response = subscriberService.findByMsisdn(msisdn);
 
         if (response.isSuccess()) {
             return ResponseEntity.ok(response);

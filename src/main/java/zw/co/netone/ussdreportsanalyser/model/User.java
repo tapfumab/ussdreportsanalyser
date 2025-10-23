@@ -34,11 +34,11 @@ public class User implements UserDetails {
     private String email;
     private String username;
     @CreatedDate
-    @Column(nullable = false, updatable = false)
+    @Column(updatable = false)
     private LocalDateTime createdDate;
 
     @LastModifiedDate
-    @Column(nullable = false)
+    @Column
     private LocalDateTime lastModifiedDate;
 
     @CreatedBy

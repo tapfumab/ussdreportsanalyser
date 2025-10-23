@@ -38,7 +38,13 @@ public class SubscriberServiceImpl implements SubscriberService {
         log.debug("Fetching all subscribers");
         Optional<List<SubscriberDto>> subscribers = subscriberRepository.findAll();
         log.info("Successfully fetched {} subscribers", subscribers.orElse(List.of()).size());
-        return ApiResponse.success("Fetched all subscribers", subscribers);
+        if(subscribers.isPresent()){
+            return ApiResponse.success("Fetched all subscribers", subscribers);
+        }
+        else{
+            return ApiResponse.failure("No subscribers found", null);
+        }
+
     }
 
     @Transactional

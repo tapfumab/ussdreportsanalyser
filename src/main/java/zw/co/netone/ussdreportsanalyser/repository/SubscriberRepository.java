@@ -17,17 +17,18 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @Slf4j
 public class SubscriberRepository {
+    private final JdbcTemplate selfCareJdbcTemplate;
 
-    private static final String SUBSCRIBER_QUERY = "SELECT msisdn," +
+    private static final String SUBSCRIBER_QUERY = "SELECT id,msisdn," +
             " passphrase, " +
             "pin," +
             " source," +
             " is_account_locked," +
             " status," +
             " attempts " +
-            "FROM subscribers";
+            "FROM subscriber";
 
-    private final JdbcTemplate selfCareJdbcTemplate;
+
     private final RowMapper<SubscriberDto> rowMapper = new RowMapper<>() {
         @Override
         public SubscriberDto mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -47,7 +48,7 @@ public class SubscriberRepository {
 
     public Optional<List<SubscriberDto>> findAll() {
         try {
-            List<SubscriberDto> results = selfCareJdbcTemplate.query(SUBSCRIBER_QUERY, rowMapper);
+            List<SubscriberDto> results = selfCareJdbcTemplate.query(SUBSCRIBER_QUERY+ "LIMIT 100 OFFSET 0", rowMapper);
             return Optional.of(results);
         } catch (Exception e) {
             log.error("Error fetching Subscriber Details: {}", e.getMessage(), e);
