@@ -1,9 +1,12 @@
 package zw.co.netone.ussdreportsanalyser.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.envers.Audited;
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -14,20 +17,40 @@ import java.util.List;
 
 import static org.hibernate.envers.RelationTargetAuditMode.NOT_AUDITED;
 
-@EqualsAndHashCode(callSuper = true)
 @Data
 @Entity
 @Audited(targetAuditMode = NOT_AUDITED, withModifiedFlag = true)
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class User extends RootEntity implements UserDetails {
+@Table(name = "users")
+public class User implements UserDetails {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    protected Long id;
     private String firstName;
     private String lastName;
     private String email;
     private String username;
+    @CreatedDate
+    @Column(nullable = false, updatable = false)
+    private LocalDateTime createdDate;
 
-    @ManyToOne(optional = false)
+    @LastModifiedDate
+    @Column(nullable = false)
+    private LocalDateTime lastModifiedDate;
+
+    @CreatedBy
+    @Column(length = 100, updatable = false)
+    private String createdBy;
+
+    @LastModifiedBy
+    @Column(length = 100)
+    private String lastModifiedBy;
+
+    @ManyToOne()
+    @JoinColumn(name = "shop_id", nullable = true)
     private Shop shop;
 
     private String cellNumber;

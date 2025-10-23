@@ -8,23 +8,23 @@ import java.util.Collection;
 
 public class CustomAuthenticationToken extends UsernamePasswordAuthenticationToken {
 
-    private final String shopId;
+    private String officeId;
 
-    public CustomAuthenticationToken(Object principal, Object credentials, String shopId) {
+    public CustomAuthenticationToken(Object principal, Object credentials,
+                                     Collection<? extends GrantedAuthority> authorities,
+                                     String officeId) {
+        super(principal, credentials, authorities);
+        this.officeId = officeId;
+    }
+
+    public CustomAuthenticationToken(Object principal, Object credentials, String officeId) {
         super(principal, credentials);
-        this.shopId = shopId;
+        this.officeId = officeId;
         super.setAuthenticated(false);
     }
 
-    public CustomAuthenticationToken(Object principal, Object credentials, String shopId,
-                                     Collection<? extends GrantedAuthority> authorities) {
-        super(principal, credentials, authorities);
-        this.shopId = shopId;
-        super.setAuthenticated(true); // must use super, as we override
+    public String getOfficeId() {
+        return officeId;
     }
 
-    public String getShopId() {
-
-        return this.shopId;
-    }
 }

@@ -117,8 +117,8 @@ public class SubscriberServiceImpl implements SubscriberService {
 
     private void performReset(Subscriber subscriber) {
         try {
-            subscriber.setLastModifiedDate(LocalDateTime.now());
-            subscriber.setLastModifiedBy(currentAuditor.getUsernameOrThrow());
+            subscriber.setCreationTime(String.valueOf(LocalDateTime.now()));
+            subscriber.setModificationTime(currentAuditor.getUsernameOrThrow());
 
             log.debug("Deleting subscriber with ID: {}", subscriber.getId());
             subscriberRepository.deleteById(subscriber.getId());

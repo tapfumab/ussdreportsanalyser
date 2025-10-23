@@ -36,7 +36,7 @@ public class ShopServiceImpl implements ShopService {
 
     @Override
     public Shop save(Shop shop) throws Exception {
-        Shop existingShop = shopRepository.findByShopId(shop.getShopId());
+        Shop existingShop = shopRepository.findByOfficeId(shop.getOfficeId());
         if (existingShop != null) {
             throw new Exception("Shop  already exists");
         }

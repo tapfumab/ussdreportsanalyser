@@ -12,13 +12,12 @@ import static org.hibernate.envers.RelationTargetAuditMode.NOT_AUDITED;
 @Data
 @Entity
 @Table(name = "shops")
-@Audited(targetAuditMode = NOT_AUDITED, withModifiedFlag = true)
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Shop extends RootEntity {
-    @Column(name = "shop_id", unique = true, nullable = false)
-    private String shopId;
+    @Column(name = "office_Id", unique = true, nullable = false)
+    private String officeId;
 
     @Column(nullable = false,unique = true, length = 100)
     private String name;

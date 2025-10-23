@@ -1,10 +1,10 @@
 package zw.co.netone.ussdreportsanalyser.service;
 
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import zw.co.netone.ussdreportsanalyser.dto.*;
 import zw.co.netone.ussdreportsanalyser.model.Shop;
@@ -12,9 +12,12 @@ import zw.co.netone.ussdreportsanalyser.model.User;
 import zw.co.netone.ussdreportsanalyser.repository.RoleRepository;
 import zw.co.netone.ussdreportsanalyser.repository.ShopRepository;
 import zw.co.netone.ussdreportsanalyser.repository.UserRepository;
+import zw.co.netone.ussdreportsanalyser.security.CurrentAuditor;
 import zw.co.netone.ussdreportsanalyser.security.CustomAuthenticationToken;
 import zw.co.netone.ussdreportsanalyser.security.JwtService;
+import zw.co.netone.ussdreportsanalyser.validator.EmailValidator;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -23,8 +26,8 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @Slf4j
 public class UserServiceImpl implements UserService {
+
     private static final String USER_ROLE = "USER";
-    private static final String USER_SHOP = "SHOP";
     private static final String USER_NOT_FOUND = "User does not exist.";
     private static final String USER_DELETED = "User deleted successfully.";
     private static final String USER_UPDATED = "User updated successfully.";
@@ -33,6 +36,7 @@ public class UserServiceImpl implements UserService {
     private static final String REGISTRATION_SUCCESSFUL = "User registered successfully.";
     private static final String USERNAME_EXISTS = "Username already exists.";
     private static final String EMAIL_EXISTS = "Email already exists.";
+    private static final String EMAIL_INVALID = "Invalid  Email Address.";
     private static final String CELL_EXISTS = "Cell number already exists.";
     private static final String USER_ROLE_REQUIRED = "User role cannot be empty.";
     private static final String USER_SHOP_REQUIRED = "User Shop cannot be empty.";
@@ -44,20 +48,20 @@ public class UserServiceImpl implements UserService {
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
     private final RoleRepository roleRepository;
-    private final PasswordEncoder passwordEncoder;
+    @Getter
+    private final CurrentAuditor currentAuditor;
 
 
     @Override
     public AuthenticationResponse<String> authenticateUser(LoginRequest loginRequest) {
         try {
-            log.info("Authentication attempt for user: {} with shopId: {}",
-                    loginRequest.username(), loginRequest.shopId());
+            log.info("Authentication attempt for user: {} with officeId: {}",
+                    loginRequest.username(), loginRequest.officeId());
 
-            Shop shop = null;
-            if (loginRequest.shopId() != null && !loginRequest.shopId().isEmpty()) {
-                shop = shopRepository.findByShopId(loginRequest.shopId());
+            Shop shop = shopRepository.findByOfficeId(loginRequest.officeId());
+            if (loginRequest.officeId() != null && !loginRequest.officeId().isEmpty()) {
                 if (shop == null) {
-                    log.error("Shop with officeId {} not found", loginRequest.shopId());
+                    log.error("Shop with office Id {} not found", loginRequest.officeId());
                     throw new RuntimeException("Invalid shop specified");
                 }
             }
@@ -65,7 +69,7 @@ public class UserServiceImpl implements UserService {
             if (shop != null) {
                 Optional<User> user = userRepository.findByUsernameAndShop(loginRequest.username(), shop);
                 if (user.isEmpty()) {
-                    log.error("User {} not found for shop {}", loginRequest.username(), loginRequest.shopId());
+                    log.error("User {} not found for shop {}", loginRequest.username(), loginRequest.officeId());
                     throw new RuntimeException("Invalid credentials. User not authorized for specified shop");
                 }
             } else {
@@ -73,7 +77,7 @@ public class UserServiceImpl implements UserService {
                         new CustomAuthenticationToken(
                                 loginRequest.username(),
                                 loginRequest.password(),
-                                loginRequest.shopId()
+                                loginRequest.officeId()
                         )
                 );
             }
@@ -94,6 +98,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public AuthenticationResponse<?> registerUser(RegisterUserRequest registrationRequest) {
+        log.info("User registration request: {}", registrationRequest);
         AuthenticationResponse<?> validation = validateUser(registrationRequest);
         if (!validation.isSuccess()) {
             log.warn("User registration validation failed: {}", validation.getMessage());
@@ -101,26 +106,37 @@ public class UserServiceImpl implements UserService {
         }
 
         try {
+            Optional<Shop> shop = shopRepository.findById(registrationRequest.Id()) ;
+            log.info("Shop found for office ID: {}", registrationRequest.Id());
+            if (shop.isEmpty() || shop.get().getId() != registrationRequest.Id()) {
+                log.warn("Shop not found for office ID: {}", registrationRequest.Id());
+                return new AuthenticationResponse<>(false, "Shop not found. Please check the office ID.", registrationRequest);
+            }
 
             User user = User.builder()
                     .firstName(registrationRequest.firstName())
                     .lastName(registrationRequest.lastName())
                     .email(registrationRequest.email())
                     .username(registrationRequest.username())
-                    .shop(shopRepository.findByShopId(USER_SHOP))
+                    .shop(shop.get())
                     .cellNumber(registrationRequest.cellNumber())
+                    .createdBy("btapfuma")
+                    .createdDate(LocalDateTime.now())
+                    .lastModifiedBy("btapfuma")
+                    .lastModifiedDate(LocalDateTime.now())
                     .role(roleRepository.findByName(USER_ROLE))
                     .activeStatus(true)
                     .build();
+            log.info("User to be registered: {}", user);
 
             userRepository.save(user);
             log.info("User registered successfully: {}", registrationRequest.username());
 
-            return new AuthenticationResponse<>(true, REGISTRATION_SUCCESSFUL, null);
+            return new AuthenticationResponse<>(true, REGISTRATION_SUCCESSFUL,registrationRequest);
 
         } catch (Exception e) {
             log.error("Error registering user: {}", registrationRequest.username(), e);
-            return new AuthenticationResponse<>(false, "Failed to register user. Please try again.", null);
+            return new AuthenticationResponse<>(false, "Failed to register user. Please try again.", registrationRequest);
         }
     }
 
@@ -129,7 +145,7 @@ public class UserServiceImpl implements UserService {
         if (registrationRequest.role() == null || registrationRequest.role().isBlank()) {
             return new AuthenticationResponse<>(false, USER_ROLE_REQUIRED, null);
         }
-        if (registrationRequest.shop() == null || registrationRequest.shop().isBlank()) {
+        if (registrationRequest.Id() == null) {
             return new AuthenticationResponse<>(false, USER_SHOP_REQUIRED, null);
         }
 
@@ -143,7 +159,7 @@ public class UserServiceImpl implements UserService {
             user.setEmail(registrationRequest.email());
             user.setUsername(registrationRequest.username());
             user.setCellNumber(registrationRequest.cellNumber());
-            user.setShop(shopRepository.findByShopId(registrationRequest.shop().trim().toUpperCase()));
+            user.setShop(Shop.builder().build());
             user.setRole(roleRepository.findByName(registrationRequest.role().trim().toUpperCase()));
 
             userRepository.save(user);
@@ -226,18 +242,21 @@ public class UserServiceImpl implements UserService {
 
     private AuthenticationResponse<?> validateUser(RegisterUserRequest request) {
         if (userRepository.findByUsername(request.username()).isPresent()) {
-            return new AuthenticationResponse<>(false, USERNAME_EXISTS, null);
+            return new AuthenticationResponse<>(false, USERNAME_EXISTS, request);
         }
 
         if (userRepository.findByEmail(request.email()).isPresent()) {
-            return new AuthenticationResponse<>(false, EMAIL_EXISTS, null);
+            return new AuthenticationResponse<>(false, EMAIL_EXISTS, request.email());
+        }
+        if (!EmailValidator.isValidFormat(request.email())) {
+            return new AuthenticationResponse<>(false, EMAIL_INVALID, request.email());
         }
 
         if (userRepository.findByCellNumber(request.cellNumber()).isPresent()) {
-            return new AuthenticationResponse<>(false, CELL_EXISTS, null);
+            return new AuthenticationResponse<>(false, CELL_EXISTS, request.cellNumber());
         }
 
-        return new AuthenticationResponse<>(true, "", null);
+        return new AuthenticationResponse<>(true, "", request);
 
     }
 

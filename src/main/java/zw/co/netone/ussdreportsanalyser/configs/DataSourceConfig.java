@@ -19,13 +19,12 @@ public class DataSourceConfig {
     }
 
     @Bean
-    @Primary
     public DataSource localDataSource() {
         return DataSourceBuilder.create()
-                .url(environment.getRequiredProperty("local.datasource.url"))
-                .username(environment.getRequiredProperty("local.datasource.username"))
-                .password(environment.getRequiredProperty("local.datasource.password"))
-                .driverClassName(environment.getRequiredProperty("local.datasource.driver-class-name"))
+                .url(environment.getRequiredProperty("spring.datasource.url"))
+                .username(environment.getRequiredProperty("spring.datasource.username"))
+                .password(environment.getRequiredProperty("spring.datasource.password"))
+                .driverClassName(environment.getRequiredProperty("spring.datasource.driver-class-name"))
                 .build();
     }
 
@@ -44,8 +43,8 @@ public class DataSourceConfig {
 //        return new JdbcTemplate(xyzDataSource());
 //    }
 
-    @Bean
-    public JdbcTemplate primaryJdbcTemplate(DataSourceConfig dataSource) {
-        return new JdbcTemplate(localDataSource());
-    }
+//    @Bean
+//    public JdbcTemplate primaryJdbcTemplate(DataSourceConfig dataSource) {
+//        return new JdbcTemplate(localDataSource());
+//    }
 }

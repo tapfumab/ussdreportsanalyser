@@ -46,9 +46,9 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http, CorsConfigurationSource corsConfigurationSource) throws Exception {
         return http.cors(cors -> cors.configurationSource(corsConfigurationSource))
                 .csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(request -> request.requestMatchers("/api/v1/auth/login","/register").permitAll()
+                .authorizeHttpRequests(request -> request.requestMatchers("/api/v1/auth/login/**","/api/v1/auth/register/**").permitAll()
                         .requestMatchers(  "/api/v1/users/**").hasAnyRole("ADMIN", "SUPERVISOR")
-                        .requestMatchers(  "/api/v1/subscribers/**").hasAnyRole( "SUPERVISOR","CASHIER")
+                        .requestMatchers(  "/api/v1/subscribers/**").hasAnyRole( "SUPERVISOR","USER")
                         .requestMatchers(SWAGGER_WHITELIST).permitAll()
                         .anyRequest()
                         .authenticated()

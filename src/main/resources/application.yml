@@ -1,11 +1,11 @@
 server:
   port: 8914
 
-local:
+spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/ussd_reports_analyser?autoReconnect=true&createDatabaseIfNotExist=true&useSSL=false
+    url: jdbc:mysql://localhost:3306/ussd_services_management?autoReconnect=true&createDatabaseIfNotExist=true&useSSL=false
     username: root
-    password: D3v3l@p3r
+    password: 'D3v3l@p3r'
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:

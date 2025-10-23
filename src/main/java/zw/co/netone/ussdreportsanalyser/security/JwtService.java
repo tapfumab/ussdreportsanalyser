@@ -44,6 +44,9 @@ public class JwtService {
     public String generateToken(zw.co.netone.ussdreportsanalyser.model.User user) {
         Map<String, String> claims = new HashMap<>();
         claims.put("role", user.getRole().getName());
+        claims.put("officeId", String.valueOf(user.getShop() != null ? user.getShop().getId() : null));
+        assert user.getShop() != null;
+        claims.put("shop", user.getShop().getName());
         return Jwts
                 .builder()
                 .claims(claims)

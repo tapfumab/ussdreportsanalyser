@@ -29,10 +29,7 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping("/all")
-    public ResponseEntity<ApiResponse<List<UserResponse>>> getAllUsers(
-            @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "10") int size) {
-        log.info("Request to fetch all users - page: {}, size: {}", page, size);
+    public ResponseEntity<ApiResponse<List<UserResponse>>> getAllUsers() {
         ApiResponse<List<UserResponse>> response = userService.findAllUsers();
         return ResponseEntity.ok(response);
     }

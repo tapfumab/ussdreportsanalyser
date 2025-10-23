@@ -10,7 +10,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name ="subscriber")
+@Table(name ="subscribers")
 public class Subscriber extends RootEntity {
 
     @Column(name ="msisdn", nullable = false , unique = true, length=30)

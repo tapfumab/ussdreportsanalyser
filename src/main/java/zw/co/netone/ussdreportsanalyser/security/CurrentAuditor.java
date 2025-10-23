@@ -1,18 +1,22 @@
 package zw.co.netone.ussdreportsanalyser.security;
 
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import zw.co.netone.ussdreportsanalyser.model.User;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
-
+import zw.co.netone.ussdreportsanalyser.model.Shop;
+import zw.co.netone.ussdreportsanalyser.model.User;
 
 import java.util.Optional;
 
 @Slf4j
 @Component
+@Data
 public class CurrentAuditor implements AuditorAware<User> {
+
 
     @Override
     public Optional<User> getCurrentAuditor() {
@@ -29,12 +33,33 @@ public class CurrentAuditor implements AuditorAware<User> {
         return Optional.empty();
     }
 
+    public Shop getLoggedUserShopOrThrow() throws Exception {
+        Optional<User> optionalUser = getCurrentAuditor();
+        if (optionalUser.isPresent()) {
+            User user = optionalUser.get();
+            return user.getShop();
+        } else {
+            log.warn("Authentication:{}", "Logged in shop not found");
+            throw new Exception("Logged in shop not found");
+        }
+    }
 
     public User getLoggedInUserOrThrow() throws Exception {
-        return getCurrentAuditor().orElseThrow(() ->  new Exception("Invalid login user"));
+        return getCurrentAuditor().orElseThrow(() -> new Exception("Invalid login user"));
     }
 
     public String getUsernameOrThrow() throws Exception {
         return getLoggedInUserOrThrow().getUsername();
+    }
+
+
+    public Optional<Shop> getLoggedUserShop() {
+        Optional<User> optionalUser = getCurrentAuditor();
+        if (optionalUser.isPresent()) {
+            return Optional.ofNullable(optionalUser.get().getShop());
+        } else {
+            log.warn("Authentication:{}", "Logged in shop found");
+            return Optional.empty();
+        }
     }
 }

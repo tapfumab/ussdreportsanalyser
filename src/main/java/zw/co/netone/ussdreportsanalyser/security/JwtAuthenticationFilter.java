@@ -43,11 +43,11 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             UserDetails userDetails = userDetailsService.loadUserByUsername(username);
 
             if (jwtService.isValid(token, userDetails)) {
-                String shopId = extractShopId(request);
+                String officeId = extractOfficeId(request);
 
-                if (shopId != null && !shopId.isEmpty()) {
-                    if (!validateUserShopAssociation(username, shopId)) {
-                        log.error("User {} is not associated with shop {}", username, shopId);
+                if (officeId != null && !officeId.isEmpty()) {
+                    if (!validateUserShopAssociation(username, officeId)) {
+                        log.error("User {} is not associated with shop {}", username, officeId);
                         response.sendError(HttpServletResponse.SC_FORBIDDEN,
                                 "User is not authorized for the specified shop");
                         return;
@@ -55,7 +55,10 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 }
 
                 CustomAuthenticationToken authenticationToken = new CustomAuthenticationToken(
-                        userDetails, null, shopId, userDetails.getAuthorities()
+                        userDetails,
+                        null,
+                        userDetails.getAuthorities()
+                        ,officeId
                 );
 
 
@@ -66,22 +69,22 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         filterChain.doFilter(request, response);
     }
 
-    private String extractShopId(HttpServletRequest request) {
+    private String extractOfficeId(HttpServletRequest request) {
 
-        String shopId = request.getHeader("X-Shop-Id");
+        String officeId = request.getHeader("X-Office-Id");
 
-        if (shopId == null || shopId.isEmpty()) {
-            shopId = request.getParameter("shopId");
+        if (officeId == null || officeId.isEmpty()) {
+            officeId = request.getParameter("officeId");
         }
 
-        return shopId;
+        return officeId;
     }
 
-    private boolean validateUserShopAssociation(String username, String shopId) {
+    private boolean validateUserShopAssociation(String username, String officeId) {
         try {
-            Shop shop = shopRepository.findByShopId(shopId);
+            Shop shop = shopRepository.findByOfficeId(officeId);
             if (shop == null) {
-                log.error("Shop with officeId {} not found", shopId);
+                log.error("Shop with officeId {} not found", officeId);
                 return false;
             }
 
