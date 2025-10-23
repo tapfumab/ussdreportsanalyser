@@ -3,7 +3,6 @@ package zw.co.netone.ussdreportsanalyser.configs;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -28,23 +27,23 @@ public class DataSourceConfig {
                 .build();
     }
 
-//    @Bean
-//    public DataSource xyzDataSource() {
-//        return DataSourceBuilder.create()
-//                .url(environment.getRequiredProperty("xyz.datasource.url"))
-//                .username(environment.getRequiredProperty("xyz.datasource.username"))
-//                .password(environment.getRequiredProperty("xyz.datasource.password"))
-//                .driverClassName(environment.getRequiredProperty("xyz.datasource.driver-class-name"))
-//                .build();
-//    }
+    @Bean
+    public DataSource selfCareDataSource() {
+        return DataSourceBuilder.create()
+                .url(environment.getRequiredProperty("spring.datasource-secondary.url"))
+                .username(environment.getRequiredProperty("spring.datasource-secondary.username"))
+                .password(environment.getRequiredProperty("spring.datasource-secondary.password"))
+                .driverClassName(environment.getRequiredProperty("spring.datasource-secondary.driver-class-name"))
+                .build();
+    }
 
-//    @Bean
-//    public JdbcTemplate xyzJdbcTemplate(DataSourceConfig dataSource) {
-//        return new JdbcTemplate(xyzDataSource());
-//    }
+    @Bean
+    public JdbcTemplate selfCareJdbcTemplate(DataSourceConfig dataSource) {
+        return new JdbcTemplate(selfCareDataSource());
+    }
 
-//    @Bean
-//    public JdbcTemplate primaryJdbcTemplate(DataSourceConfig dataSource) {
-//        return new JdbcTemplate(localDataSource());
-//    }
+    @Bean
+    public JdbcTemplate primaryJdbcTemplate(DataSourceConfig dataSource) {
+        return new JdbcTemplate(localDataSource());
+    }
 }

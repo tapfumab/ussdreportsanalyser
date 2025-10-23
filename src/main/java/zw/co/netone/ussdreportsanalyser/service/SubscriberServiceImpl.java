@@ -5,16 +5,16 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import zw.co.netone.ussdreportsanalyser.dto.ApiResponse;
+import zw.co.netone.ussdreportsanalyser.dto.SubscriberDto;
 import zw.co.netone.ussdreportsanalyser.exception.SubscriberNotFoundException;
 import zw.co.netone.ussdreportsanalyser.exception.SubscriberResetNotEligibleException;
-import zw.co.netone.ussdreportsanalyser.model.Subscriber;
 import zw.co.netone.ussdreportsanalyser.repository.SubscriberRepository;
 import zw.co.netone.ussdreportsanalyser.security.CurrentAuditor;
 import zw.co.netone.ussdreportsanalyser.validator.SubscriberResetEligibilityChecker;
 import zw.co.netone.ussdreportsanalyser.validator.SubscriberValidator;
 
-import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Service implementation for subscriber operations
@@ -34,10 +34,10 @@ public class SubscriberServiceImpl implements SubscriberService {
 
     @Override
     @Transactional(readOnly = true)
-    public ApiResponse<List<Subscriber>> findAllSubscribers() {
+    public ApiResponse<Optional<List<SubscriberDto>>> findAllSubscribers() {
         log.debug("Fetching all subscribers");
-        List<Subscriber> subscribers = subscriberRepository.findAll();
-        log.info("Successfully fetched {} subscribers", subscribers.size());
+        Optional<List<SubscriberDto>> subscribers = subscriberRepository.findAll();
+        log.info("Successfully fetched {} subscribers", subscribers.orElse(List.of()).size());
         return ApiResponse.success("Fetched all subscribers", subscribers);
     }
 
@@ -49,8 +49,9 @@ public class SubscriberServiceImpl implements SubscriberService {
         String normalizedMsisdn = msisdnNormalizer.normalize(msisdn);
         validateMsisdn(normalizedMsisdn);
 
-        Subscriber subscriber = findSubscriberByMsisdn(normalizedMsisdn);
-        log.debug("Found subscriber for reset: ID={}, MSISDN={}", subscriber.getId(), normalizedMsisdn);
+        SubscriberDto subscriber = findSubscriberByMsisdn(normalizedMsisdn);
+        log.debug("Found subscriber for reset: ID={}, MSISDN={}", subscriber.id(),
+                normalizedMsisdn);
 
         checkResetEligibility(subscriber);
 
@@ -61,7 +62,7 @@ public class SubscriberServiceImpl implements SubscriberService {
 
     @Override
     @Transactional(readOnly = true)
-    public ApiResponse<Subscriber> findByMsisdn(String msisdn) {
+    public ApiResponse<SubscriberDto> findByMsisdn(String msisdn) {
         log.debug("Searching for subscriber by MSISDN: {}", msisdn);
 
         String normalizedMsisdn = msisdnNormalizer.normalize(msisdn);
@@ -95,7 +96,7 @@ public class SubscriberServiceImpl implements SubscriberService {
         }
     }
 
-    private Subscriber findSubscriberByMsisdn(String msisdn) {
+    private SubscriberDto findSubscriberByMsisdn(String msisdn) {
         return subscriberRepository.findByMsisdn(msisdn)
                 .orElseThrow(() -> {
                     log.error("Subscriber not found with MSISDN: {}", msisdn);
@@ -103,7 +104,7 @@ public class SubscriberServiceImpl implements SubscriberService {
                 });
     }
 
-    private void checkResetEligibility(Subscriber subscriber) {
+    private void checkResetEligibility(SubscriberDto subscriber) {
         SubscriberResetEligibilityChecker.EligibilityResult eligibilityResult =
                 eligibilityChecker.checkEligibility(subscriber);
 
@@ -115,16 +116,13 @@ public class SubscriberServiceImpl implements SubscriberService {
         log.debug("Subscriber eligible for reset: {}", eligibilityResult.getReason());
     }
 
-    private void performReset(Subscriber subscriber) {
+    private void performReset(SubscriberDto subscriber) {
         try {
-            subscriber.setCreationTime(String.valueOf(LocalDateTime.now()));
-            subscriber.setModificationTime(currentAuditor.getUsernameOrThrow());
-
-            log.debug("Deleting subscriber with ID: {}", subscriber.getId());
-            subscriberRepository.deleteById(subscriber.getId());
+            log.debug("Deleting subscriber with ID: {}- details {}", subscriber.id(),subscriber);
+            subscriberRepository.deleteById(subscriber.id());
 
         } catch (Exception e) {
-            log.error("Error during subscriber reset for ID: {}", subscriber.getId(), e);
+            log.error("Error during subscriber reset for ID: {}", subscriber.id(), e);
             throw new RuntimeException("Failed to reset subscriber. Please try again later", e);
         }
     }

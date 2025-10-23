@@ -2,8 +2,8 @@ package zw.co.netone.ussdreportsanalyser.validator;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
+import zw.co.netone.ussdreportsanalyser.dto.SubscriberDto;
 import zw.co.netone.ussdreportsanalyser.enums.RegistrationStatus;
-import zw.co.netone.ussdreportsanalyser.model.Subscriber;
 
 @Slf4j
 @Component
@@ -12,18 +12,18 @@ public class SubscriberResetEligibilityChecker {
     private static final String USSD_SOURCE = "USSD";
     private static final int MAX_ATTEMPTS_THRESHOLD = 3;
 
-    public EligibilityResult checkEligibility(Subscriber subscriber) {
+    public EligibilityResult checkEligibility(SubscriberDto subscriber) {
         if (subscriber == null) {
             return EligibilityResult.ineligible("Subscriber not found");
         }
 
-        if (!USSD_SOURCE.equalsIgnoreCase(subscriber.getSource())) {
-            log.warn("Reset attempted on non-USSD subscriber. Source: {}", subscriber.getSource());
+        if (!USSD_SOURCE.equalsIgnoreCase(subscriber.source())) {
+            log.warn("Reset attempted on non-USSD subscriber. Source: {}", subscriber.source());
             return EligibilityResult.ineligible("Only USSD subscribers can be reset");
         }
 
-        if (!RegistrationStatus.INACTIVE.equals(subscriber.getStatus())) {
-            log.warn("Reset attempted on active subscriber. Status: {}", subscriber.getStatus());
+        if (!RegistrationStatus.INACTIVE.equals(subscriber.status())) {
+            log.warn("Reset attempted on active subscriber. Status: {}", subscriber.status());
             return EligibilityResult.ineligible("Only inactive subscribers can be reset");
         }
 
@@ -31,10 +31,10 @@ public class SubscriberResetEligibilityChecker {
             return EligibilityResult.ineligible("Account must be locked for reset");
         }
 
-        if (subscriber.getAttempts() <= MAX_ATTEMPTS_THRESHOLD) {
+        if (subscriber.attempts() <= MAX_ATTEMPTS_THRESHOLD) {
             return EligibilityResult.ineligible(
                     String.format("Attempts (%d) must exceed threshold (%d)",
-                            subscriber.getAttempts(), MAX_ATTEMPTS_THRESHOLD)
+                            subscriber.attempts(), MAX_ATTEMPTS_THRESHOLD)
             );
         }
 

@@ -26,7 +26,7 @@ public class Shop extends RootEntity {
     private String location;
 
     @Column(length = 20)
-    private String zone;
+    private String zoneId;
 
     @Column(nullable = false)
     @Builder.Default
